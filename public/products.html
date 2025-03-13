@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - NorthRift Gold</title>
+    <link rel="icon" type="image/png" href="/images/logo/Logo.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 0.5rem;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            padding-left: 0.5rem;
+        }
+
+        .search-box i {
+            color: #aaa;
+        }
+
+        .products-hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .products-hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .products-hero p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .logo-text-main, .logo-text-gold {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/images/logo/Logo.png" alt="Organic Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-text-main">NorthRift</span>
+                        <span class="logo-text-gold">Gold</span>
+                    </div>
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#why-us">Why Us</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Cart <span>0</span>
+                    </button>
+                    <button class="checkout-btn">
+                        <i class="fas fa-cash-register"></i>
+                        Checkout
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-hero">
+            <h1>Our Fresh Products</h1>
+            <p>Discover our selection of fresh, organic, and sustainably grown products</p>
+        </section>
+
+        <div class="product-filters">
+            <div class="filter-group">
+                <button class="filter-btn active" data-category="all" onclick="filterProducts('all')">All</button>
+                <button class="filter-btn" data-category="meat-poultry" onclick="filterProducts('meat-poultry')">Meat & Poultry</button>
+                <button class="filter-btn" data-category="dairy-milk" onclick="filterProducts('dairy-milk')">Dairy & Milk</button>
+                <button class="filter-btn" data-category="vegetables" onclick="filterProducts('vegetables')">Vegetables</button>
+                <button class="filter-btn" data-category="fruits" onclick="filterProducts('fruits')">Fruits</button>
+                <button class="filter-btn" data-category="honey-preserves" onclick="filterProducts('honey-preserves')">Honey & Preserves</button>
+                <button class="filter-btn" data-category="herbs-spices" onclick="filterProducts('herbs-spices')">Herbs & Spices</button>
+                <button class="filter-btn" data-category="legumes" onclick="filterProducts('legumes')">Legumes</button>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search products...">
+            </div>
+        </div>
+
+        <section id="products" class="products">
+            <h2>Our Freshest Picks</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/honey.jpg" alt="Pure Raw Honey" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pure Raw Honey (500g)</h3>
+                        <p class="product-description">100% pure, raw honey from local beekeepers. Rich in nutrients and natural sweetness.</p>
+                        <p class="product-price">Ksh 850</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/beef tallow.jpg" alt="Beef Tallow" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Beef Tallow (500g)</h3>
+                        <p class="product-description">High-quality rendered beef fat, perfect for cooking and traditional recipes.</p>
+                        <p class="product-price">Ksh 1,200</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/chicken.jpg" alt="Free Range Chicken" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Free Range Chicken</h3>
+                        <p class="product-description">Farm-fresh, free-range chicken raised naturally without antibiotics.</p>
+                        <p class="product-price">Ksh 850</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/sheep.jpg" alt="Organic Lamb" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Lamb (Per Kg)</h3>
+                        <p class="product-description">Premium quality lamb from grass-fed, free-range sheep.</p>
+                        <p class="product-price">Ksh 950</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/apples.jpg" alt="Fresh Apples" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Apples</h3>
+                        <p class="product-description">Crisp and juicy apples, perfect for a healthy snack.</p>
+                        <p class="product-price">Ksh 500</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/mint.jpg" alt="Mint" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mint</h3>
+                        <p class="product-description">Fresh mint leaves, perfect for teas and garnishes.</p>
+                        <p class="product-price">Ksh 200</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/persley.jpg" alt="Parsley" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Parsley</h3>
+                        <p class="product-description">Fresh parsley, ideal for seasoning and garnishing.</p>
+                        <p class="product-price">Ksh 150</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/pumkins.jpg" alt="Pumpkins" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pumpkins</h3>
+                        <p class="product-description">Fresh pumpkins, perfect for soups and pies.</p>
+                        <p class="product-price">Ksh 300</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/Rosemary.jpg" alt="Rosemary" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rosemary</h3>
+                        <p class="product-description">Aromatic rosemary, great for seasoning meats.</p>
+                        <p class="product-price">Ksh 250</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/Sour Milk.jpg" alt="Sour Milk" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sour Milk</h3>
+                        <p class="product-description">Traditional sour milk, rich in probiotics.</p>
+                        <p class="product-price">Ksh 100</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/spinach.jpg" alt="Spinach" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Spinach</h3>
+                        <p class="product-description">Fresh spinach leaves, packed with nutrients.</p>
+                        <p class="product-price">Ksh 150</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/strawberries.jpeg" alt="Strawberries" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Strawberries</h3>
+                        <p class="product-description">Sweet and juicy strawberries, perfect for desserts.</p>
+                        <p class="product-price">Ksh 400</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/Tilapia Fish.jpg" alt="Tilapia Fish" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tilapia Fish</h3>
+                        <p class="product-description">Fresh tilapia fish, perfect for grilling.</p>
+                        <p class="product-price">Ksh 600</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/basil.jpg" alt="Basil" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basil</h3>
+                        <p class="product-description">Fresh basil leaves, perfect for Italian dishes.</p>
+                        <p class="product-price">Ksh 200</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/beans.jpg" alt="Beans" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Beans</h3>
+                        <p class="product-description">Nutritious beans, great for stews and soups.</p>
+                        <p class="product-price">Ksh 300</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/cabbage.jpg" alt="Cabbage" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cabbage</h3>
+                        <p class="product-description">Fresh cabbage, perfect for salads and slaws.</p>
+                        <p class="product-price">Ksh 100</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/capcicum.jpg" alt="Capsicum" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Capsicum</h3>
+                        <p class="product-description">Colorful capsicums, great for stir-fries and salads.</p>
+                        <p class="product-price">Ksh 150</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/carrots.jpg" alt="Carrots" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Carrots</h3>
+                        <p class="product-description">Crunchy carrots, perfect for snacking and cooking.</p>
+                        <p class="product-price">Ksh 120</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/chilly.jpg" alt="Chilly" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chilly</h3>
+                        <p class="product-description">Spicy chillies, perfect for adding heat to dishes.</p>
+                        <p class="product-price">Ksh 100</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/ghee.jpg" alt="Ghee" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ghee</h3>
+                        <p class="product-description">Pure ghee, perfect for cooking and baking.</p>
+                        <p class="product-price">Ksh 500</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/goat milk.jpg" alt="Goat Milk" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Goat Milk</h3>
+                        <p class="product-description">Fresh goat milk, rich in nutrients.</p>
+                        <p class="product-price">Ksh 200</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/goat.jpg" alt="Goat Meat" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Goat Meat</h3>
+                        <p class="product-description">Tender goat meat, perfect for stews and grills.</p>
+                        <p class="product-price">Ksh 700</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="/images/products/kales.jpg" alt="Kales" class="product-img">
+                        <div class="cart-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stock-overlay">
+                            <span class="in-stock-badge">In Stock</span>
+                            <!-- Example for low stock and out of stock -->
+                            <!-- <span class="stock-label low-stock">Low Stock</span> -->
+                            <!-- <span class="stock-label out-of-stock">Out of Stock</span> -->
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kales</h3>
+                        <p class="product-description">Fresh kales, perfect for healthy meals.</p>
+                        <p class="product-price">Ksh 150</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="99" onchange="validateQuantity(this)">
+                            <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The quality of the products is unmatched. I love the freshness and the taste!"</p>
+                    <p class="testimonial-author">- Wanjiku Mwangi</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"NorthRift Gold has transformed my cooking. The organic produce is simply the best."</p>
+                    <p class="testimonial-author">- Otieno Ochieng</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I appreciate the sustainable practices. It's great to know I'm supporting a green initiative."</p>
+                    <p class="testimonial-author">- Amina Hassan</p>
+                </div>
+            </div>
+            <h2>What Our Customers Say</h2>
+        </section>
+
+        <div class="whatsapp-chat">
+            <a href="https://wa.me/254715491326" target="_blank" class="whatsapp-chat-btn">
+                <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="/images/logo/Logo.png" alt="NorthRift Gold Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-text-main">NorthRift</span>
+                        <span class="logo-text-gold">Gold</span>
+                    </div>
+                </div>
+                <h3>Get in Touch</h3>
+                <p class="footer-description">Our mission is to drive progress and enhance the lives of our customers by delivering superior products and services that exceed expectations.</p>
+                <a href="products.html" class="shop-now-btn">Buy our Products Today <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Link</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html#about">About us</a></li>
+                    <li><a href="products.html#products">Products</a></li>
+                    <li><a href="index.html#why-us">Why Choose Us</a></li>
+                    <li><a href="index.html#testimonials">Testimonial</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-phone contact-icon"></i> +254715491326</p>
+                <p><i class="fas fa-envelope contact-icon"></i> NorthRiftGold@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt contact-icon"></i> Uasin Gishu County, KE</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resource</h3>
+                <ul>
+                    <li><a href="#">Privacy & Policy</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#" class="social-icon"><img src="/images/social/facebook.svg" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="/images/social/whatsapp.svg" alt="WhatsApp"></a>
+                <a href="#" class="social-icon"><img src="/images/social/tik-tok.svg" alt="TikTok"></a>
+                <a href="#" class="social-icon"><img src="/images/social/twitter-alt.svg" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p style="text-align: center;">&copy;Copyright NorthRift Gold. All rights reserved. 2024</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

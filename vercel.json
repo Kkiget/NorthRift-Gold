@@ -11,11 +11,5 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-  "scripts": {
-    "dev": "vue-cli-service serve"
-  },
-  "dependencies": {
-    // Your dependencies here
-  }
+  ]
 } 
