@@ -48,7 +48,7 @@ export default function Home() {
             p { font-size: md; }
           }
         `}</style>
-        <div className="container mx-auto px-4 text-center bg-opacity-50 bg-black">
+        <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 text-white">Fresh. Organic. Sustainable.</h1>
             <p className="text-lg mb-8 text-white">100% Trusted Platform</p>
@@ -67,12 +67,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             <div className="space-y-4 md:col-span-2">
-              <h2 className="text-3xl font-bold text-green-700">At Organic</h2>
+              <h2 className="text-3xl font-bold text-green-700">About Us</h2>
               <p className="text-lg text-gray-600">
-                We are passionate about growing fresh, chemical-free produce. Nestled in the heart of nature, our farm uses sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
+                At Organic, we are committed to cultivating fresh, chemical-free produce. Our farm is nestled in the heart of nature, where we employ sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
               </p>
               <p className="text-sm text-gray-500">
-                We are dedicated to providing fresh, chemical-free produce through sustainable farming. Nestled in nature, our farm prioritizes protecting the environment while delivering healthy, high-quality food to your table.
+                Our dedication to providing fresh, chemical-free produce through sustainable farming is unwavering. We prioritize protecting the environment while delivering high-quality food to your table.
               </p>
               <Link 
                 href="/about"
