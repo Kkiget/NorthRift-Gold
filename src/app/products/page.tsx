@@ -24,64 +24,64 @@ export default function Products() {
       id: 1,
       name: "Fresh Organic Tomatoes",
       category: "vegetables",
-      price: 4.99,
-      image: "/images/products/Produce4.jpg",
+      price: 150, // Updated market price for large, organic heads
+      image: "/images/products/fresh_organic_tomatoes.jpg",
       description: "Locally grown organic tomatoes"
     },
     {
       id: 2,
       name: "Organic Carrots",
       category: "vegetables",
-      price: 3.99,
-      image: "/images/products/carrots.jpg",
+      price: 150, // Updated market price for organic or premium carrots
+      image: "/images/products/organic_carrots.jpg",
       description: "Fresh, crunchy organic carrots"
     },
     {
       id: 3,
       name: "Organic Cabbage",
       category: "vegetables",
-      price: 5.99,
-      image: "/images/products/cabbage.jpg",
+      price: 150, // Updated market price for large, organic heads
+      image: "/images/products/organic_cabbage.jpg",
       description: "Fresh, crisp organic cabbage"
     },
     {
       id: 4,
       name: "Organic Apples",
       category: "fruits",
-      price: 6.99,
-      image: "/images/products/apples.jpg",
+      price: 1000, // Updated market price for large, high quality or out of season strawberries
+      image: "/images/products/organic_apples.jpg",
       description: "Sweet and juicy organic apples"
     },
     {
       id: 5,
       name: "Fresh Strawberries",
       category: "fruits",
-      price: 7.99,
-      image: "/images/products/strawberries.jpeg",
+      price: 1000, // Updated market price for large, high quality or out of season strawberries
+      image: "/images/products/fresh_strawberries.jpg",
       description: "Sweet and fresh organic strawberries"
     },
     {
       id: 6,
       name: "Organic Honey",
       category: "dairy",
-      price: 12.99,
-      image: "/images/products/honey.jpg",
+      price: 1500, // Updated market price for raw, organic, or specialty honey
+      image: "/images/products/organic_honey.jpg",
       description: "Pure, natural organic honey"
     },
     {
       id: 7,
       name: "Fresh Goat Milk",
       category: "dairy",
-      price: 5.99,
-      image: "/images/products/goat milk.jpg",
+      price: 400, // Updated market price for organic or farm-fresh goat milk
+      image: "/images/products/fresh_goat_milk.jpg",
       description: "Fresh, organic goat milk"
     },
     {
       id: 8,
       name: "Organic Beans",
       category: "grains",
-      price: 4.99,
-      image: "/images/products/beans.jpg",
+      price: 300, // Updated market price for imported or specialty varieties
+      image: "/images/products/organic_beans.jpg",
       description: "Fresh organic beans"
     }
   ];
