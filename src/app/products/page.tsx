@@ -25,7 +25,7 @@ export default function Products() {
       id: 1,
       name: "Tomatoes",
       category: "vegetables",
-      price: 150, // Updated market price for large, organic heads
+      price: 99, // Updated price for Italian tomatoes
       image: "/images/products/fresh tomatoes.jpg",
       description: "Locally grown tomatoes"
     },
@@ -33,7 +33,7 @@ export default function Products() {
       id: 2,
       name: "Carrots",
       category: "vegetables",
-      price: 150, // Updated market price for organic or premium carrots
+      price: 89, // Updated price per kg
       image: "/images/products/carrots.jpg",
       description: "Fresh, crunchy carrots"
     },
@@ -41,7 +41,7 @@ export default function Products() {
       id: 3,
       name: "Cabbage",
       category: "vegetables",
-      price: 150, // Updated market price for large, organic heads
+      price: 29, // Updated price for White Cabbage
       image: "/images/products/cabbage.jpg",
       description: "Fresh, crisp cabbage"
     },
@@ -49,7 +49,7 @@ export default function Products() {
       id: 4,
       name: "Apples",
       category: "fruits",
-      price: 449, // Updated price per kg
+      price: 449, // Updated price per kg for Crisp Red Apples
       image: "/images/products/apples.jpg",
       description: "Sweet and juicy apples"
     },
@@ -65,7 +65,7 @@ export default function Products() {
       id: 6,
       name: "Honey",
       category: "Animal products",
-      price: 1500, // Updated market price for raw, organic, or specialty honey
+      price: 1500, // Market price for raw, organic, or specialty honey
       image: "/images/products/honey.jpg",
       description: "Pure, natural honey"
     },
@@ -73,7 +73,7 @@ export default function Products() {
       id: 7,
       name: "Goat Milk",
       category: "Animal products",
-      price: 400, // Updated market price for organic or farm-fresh goat milk
+      price: 400, // Market price for organic or farm-fresh goat milk
       image: "/images/products/goat milk.jpg",
       description: "Fresh, goat milk"
     },
@@ -113,7 +113,7 @@ export default function Products() {
       id: 12,
       name: "Basil",
       category: "herbs",
-      price: 50, // Market price for large, fresh, or organic bunches
+      price: 69, // Updated price per bunch
       image: "/images/products/basil.jpg",
       description: "Fresh basil leaves"
     },
@@ -129,7 +129,7 @@ export default function Products() {
       id: 14,
       name: "Capcicum",
       category: "vegetables",
-      price: 329, // Updated price per kg
+      price: 329, // Updated price per kg for Red and Yellow Bell Peppers
       image: "/images/products/capcicum.jpg",
       description: "Fresh capcicum peppers"
     },
@@ -145,7 +145,7 @@ export default function Products() {
       id: 16,
       name: "Chilly",
       category: "vegetables",
-      price: 400, // Market price for rare or high-quality varieties
+      price: 399, // Updated price per kg for Green Bullet Chilli
       image: "/images/products/chilly.jpg",
       description: "Spicy chilly peppers"
     },
@@ -169,7 +169,7 @@ export default function Products() {
       id: 19,
       name: "Kales",
       category: "vegetables",
-      price: 50, // Market price for large, organic bunches
+      price: 19, // Updated price per bunch for Sukuma Wiki
       image: "/images/products/kales.jpg",
       description: "Fresh kales"
     },
@@ -185,7 +185,7 @@ export default function Products() {
       id: 21,
       name: "Persley",
       category: "herbs",
-      price: 50, // Market price for high-quality bunches
+      price: 29, // Updated price per bunch
       image: "/images/products/persley.jpg",
       description: "Fresh persley leaves"
     },
@@ -193,7 +193,7 @@ export default function Products() {
       id: 22,
       name: "Pumpkins",
       category: "vegetables",
-      price: 300, // Market price for large, specialty pumpkins
+      price: 349, // Updated price for Pumpkin
       image: "/images/products/pumkins.jpg",
       description: "Fresh pumpkins"
     },
@@ -217,7 +217,7 @@ export default function Products() {
       id: 25,
       name: "Red Cabbage",
       category: "vegetables",
-      price: 150, // Example price
+      price: 159, // Updated price per kg
       image: "/images/products/red cabbage.jpg",
       description: "Fresh red cabbage"
     },
@@ -265,7 +265,7 @@ export default function Products() {
       id: 31,
       name: "Thyme",
       category: "herbs",
-      price: 50, // Example price
+      price: 20, // Updated price per bunch
       image: "/images/products/thyme.jpg",
       description: "Fresh thyme"
     },
@@ -273,7 +273,7 @@ export default function Products() {
       id: 32,
       name: "Spring Onions",
       category: "vegetables",
-      price: 60, // Example price
+      price: 29, // Updated price per bunch
       image: "/images/products/spring onions.jpg",
       description: "Fresh spring onions"
     },
@@ -321,7 +321,7 @@ export default function Products() {
       id: 38,
       name: "Avocado",
       category: "fruits",
-      price: 179, // Updated price per kg
+      price: 39, // Updated price per piece
       image: "/images/products/avocado.jpg",
       description: "Fresh avocado"
     },
@@ -377,7 +377,7 @@ export default function Products() {
       id: 45,
       name: "Managu",
       category: "vegetables",
-      price: 29, // Updated price per bunch
+      price: 39, // Updated price per bunch
       image: "/images/products/managu.jpg",
       description: "Fresh managu"
     },
@@ -393,7 +393,7 @@ export default function Products() {
       id: 47,
       name: "Terere",
       category: "vegetables",
-      price: 29, // Updated price per bunch
+      price: 39, // Updated price per bunch
       image: "/images/products/terere.jpg",
       description: "Fresh terere"
     },
@@ -425,7 +425,7 @@ export default function Products() {
       id: 51,
       name: "Pumpkin Leaves",
       category: "vegetables",
-      price: 70, // Example price
+      price: 29, // Updated price per bunch
       image: "/images/products/pumpkin leaves.jpg",
       description: "Fresh pumpkin leaves"
     },
@@ -465,7 +465,7 @@ export default function Products() {
       id: 56,
       name: "Leeks",
       category: "vegetables",
-      price: 100, // Example price
+      price: 199, // Updated price per kg
       image: "/images/products/leeks.jpg",
       description: "Fresh leeks"
     },
@@ -497,7 +497,7 @@ export default function Products() {
       id: 60,
       name: "Egg Plant",
       category: "vegetables",
-      price: 159, // Updated price per kg
+      price: 149, // Updated price per kg
       image: "/images/products/egg plant.jpg",
       description: "Fresh egg plant"
     },
@@ -505,7 +505,7 @@ export default function Products() {
       id: 61,
       name: "Green Peas",
       category: "vegetables",
-      price: 169, // Updated price per kg
+      price: 499, // Updated price per kg
       image: "/images/products/Green peas.jpg",
       description: "Fresh green peas"
     }
