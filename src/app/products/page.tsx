@@ -329,7 +329,7 @@ export default function Products() {
       id: 39,
       name: "Dry Maize",
       category: "grains",
-      price: 100, // Updated price
+      price: 50, // Corrected price
       image: "/images/products/dry maize.jpg",
       description: "Fresh dry maize"
     },
@@ -345,7 +345,7 @@ export default function Products() {
       id: 41,
       name: "Sorghum",
       category: "grains",
-      price: 100, // Updated price
+      price: 200, // Corrected price
       image: "/images/products/sorghum.jpg",
       description: "Fresh sorghum"
     },
@@ -672,7 +672,10 @@ export default function Products() {
                     </>
                   )}
                   {['Beans', 'Dry Maize', 'Wheat', 'Sorghum', 'Finger Millet', 'Cassava', 'Ground Nuts'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">Kg</button>
+                    <>
+                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">Kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '5 kg')} className="px-2 py-1 border rounded">5 kg</button>
+                    </>
                   )}
                   {['Goat Milk', 'Sour Milk'].includes(product.name) && (
                     <>
