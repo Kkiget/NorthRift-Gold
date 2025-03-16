@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center">
+      <section className="relative h-auto flex flex-col md:flex-row items-center mt-8">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-5xl font-bold mb-6 text-black">Fresh. Organic. Sustainable.</h1>
@@ -52,22 +52,23 @@ export default function Home() {
           <div className="grid grid-rows-2 gap-2">
             <Image
               src="/images/hero/farmer.jpg"
-              alt="Main Image"
+              alt="Farmer holding fresh produce"
               width={500}
               height={400}
               className="object-cover rounded-lg"
+              priority
             />
             <div className="grid grid-cols-2 gap-2">
               <Image
                 src="/images/hero/preview1.jpg"
-                alt="Sub Image 1"
+                alt="Farm landscape"
                 width={240}
                 height={200}
                 className="object-cover rounded-lg"
               />
               <Image
                 src="/images/hero/preview2.jpg"
-                alt="Sub Image 2"
+                alt="Fresh vegetables"
                 width={240}
                 height={200}
                 className="object-cover rounded-lg"
@@ -78,20 +79,20 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-16">
+      <section className="py-16 mt-8">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 gap-4 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             <div className="grid grid-rows-2 gap-2">
               <Image
                 src="/images/about/about1.jpg"
-                alt="Image 1"
+                alt="Beekeeper with honey"
                 width={300}
                 height={200}
                 className="object-cover rounded-lg"
               />
               <Image
                 src="/images/about/about2.jpg"
-                alt="Image 2"
+                alt="Green leaves"
                 width={300}
                 height={200}
                 className="object-cover rounded-lg"
@@ -115,14 +116,14 @@ export default function Home() {
             <div className="grid grid-rows-2 gap-2">
               <Image
                 src="/images/about/about3.jpg"
-                alt="Image 3"
+                alt="Cow in pasture"
                 width={300}
                 height={200}
                 className="object-cover rounded-lg"
               />
               <Image
                 src="/images/about/about5.jpeg"
-                alt="Image 4"
+                alt="Fresh produce display"
                 width={300}
                 height={200}
                 className="object-cover rounded-lg"
