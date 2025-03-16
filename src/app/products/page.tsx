@@ -25,7 +25,7 @@ export default function Products() {
       name: "Tomatoes",
       category: "vegetables",
       price: 150, // Updated market price for large, organic heads
-      image: "/images/products/tomatoes.jpg",
+      image: "/images/products/fresh tomatoes.jpg",
       description: "Locally grown tomatoes"
     },
     {
@@ -63,7 +63,7 @@ export default function Products() {
     {
       id: 6,
       name: "Honey",
-      category: "dairy",
+      category: "Animal products",
       price: 1500, // Updated market price for raw, organic, or specialty honey
       image: "/images/products/honey.jpg",
       description: "Pure, natural honey"
@@ -71,7 +71,7 @@ export default function Products() {
     {
       id: 7,
       name: "Goat Milk",
-      category: "dairy",
+      category: "Animal products",
       price: 400, // Updated market price for organic or farm-fresh goat milk
       image: "/images/products/goat milk.jpg",
       description: "Fresh, goat milk"
@@ -87,7 +87,7 @@ export default function Products() {
     {
       id: 9,
       name: "Sour Milk",
-      category: "dairy",
+      category: "Animal products",
       price: 200, // Market price for premium brands or organic mala
       image: "/images/products/Sour Milk.jpg",
       description: "Premium quality sour milk"
@@ -103,7 +103,7 @@ export default function Products() {
     {
       id: 11,
       name: "Tilapia",
-      category: "fish",
+      category: "Animal products",
       price: 800, // Market price for fresh, large tilapia
       image: "/images/products/Tilapia Fish.jpg",
       description: "Fresh tilapia fish"
@@ -119,7 +119,7 @@ export default function Products() {
     {
       id: 13,
       name: "Beef Tallow",
-      category: "meat",
+      category: "Animal products",
       price: 800, // Market price for beef tallow from a reputable butcher
       image: "/images/products/beef tallow.jpg",
       description: "High-quality beef tallow"
@@ -135,7 +135,7 @@ export default function Products() {
     {
       id: 15,
       name: "Chicken",
-      category: "meat",
+      category: "Animal products",
       price: 1500, // Market price for free-range, organic chicken
       image: "/images/products/chicken.jpg",
       description: "Free-range chicken"
@@ -151,7 +151,7 @@ export default function Products() {
     {
       id: 17,
       name: "Ghee",
-      category: "dairy",
+      category: "Animal products",
       price: 2000, // Market price for imported, organic, or artisanal ghee
       image: "/images/products/ghee.jpg",
       description: "Pure ghee"
@@ -159,7 +159,7 @@ export default function Products() {
     {
       id: 18,
       name: "Goat Meat",
-      category: "meat",
+      category: "Animal products",
       price: 1200, // Market price for prime cuts or organic goat meat
       image: "/images/products/goat.jpg",
       description: "Tender goat meat"
@@ -207,7 +207,7 @@ export default function Products() {
     {
       id: 24,
       name: "Sheep Mutton",
-      category: "meat",
+      category: "Animal products",
       price: 1500, // Market price for prime cuts or organic mutton
       image: "/images/products/sheep.jpg",
       description: "Tender sheep mutton"
@@ -431,7 +431,7 @@ export default function Products() {
     {
       id: 52,
       name: "Kienyeji Eggs",
-      category: "dairy",
+      category: "Animal products",
       price: 25, // Updated price per egg
       image: "/images/products/Kienyeji eggs.jpg",
       description: "Fresh kienyeji eggs"
@@ -510,7 +510,7 @@ export default function Products() {
     }
   ];
 
-  const categories = ['all', 'vegetables', 'fruits', 'grains', 'dairy', 'Fish', 'herbs', 'meat'];
+  const categories = ['all', 'vegetables', 'fruits', 'grains', 'herbs', 'Animal products'];
 
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
