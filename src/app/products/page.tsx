@@ -601,9 +601,6 @@ export default function Products() {
                   <span className="text-green-600 font-bold">Ksh{getPrice(product).toLocaleString()}</span>
                 </div>
                 <div className="flex gap-2 mb-2">
-                  {['Tomatoes', 'Red Onions', 'White Onions', 'Potatoes', 'Sweet Potatoes', 'Arrowroots', 'Bananas', 'Goat Meat', 'Sheep Mutton', 'Honey', 'Chicken', 'Tilapia'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per item')} className="px-2 py-1 border rounded">Per Item</button>
-                  )}
                   {['Beef Tallow', 'Ghee', 'Honey'].includes(product.name) && (
                     <>
                       <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
@@ -617,7 +614,7 @@ export default function Products() {
                     </>
                   )}
                   {product.name === 'Apples' && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per kg')} className="px-2 py-1 border rounded">Per Kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
                   )}
                   {['Strawberries', 'Gooseberries'].includes(product.name) && (
                     <>
@@ -677,10 +674,13 @@ export default function Products() {
                   {['Matoke Bananas', 'Avocado', 'Ripe Bananas', 'Sweet Bananas'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
                   )}
-                  {['Cucumber', 'Potatoes', 'Sweet Potatoes', 'Arrowroots', 'Red Onions', 'White Onions', 'Capcicum', 'Chilly', 'Tomatoes', 'Carrots'].includes(product.name) && (
+                  {['Cucumber', 'Potatoes', 'Sweet Potatoes', 'Arrowroots', 'Red Onions', 'White Onions', 'Capcicum', 'Chilly', 'Tomatoes', 'Carrots', 'Pumpkins'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
                   )}
                   {product.name === 'Spring Onions' && (
+                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Bunch</button>
+                  )}
+                  {['Basil', 'Mint', 'Persley', 'Rosemary', 'Thyme', 'Dhania'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Bunch</button>
                   )}
                 </div>
