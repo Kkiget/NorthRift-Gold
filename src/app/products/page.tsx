@@ -25,7 +25,7 @@ export default function Products() {
       id: 1,
       name: "Tomatoes",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 100, // Updated price
       image: "/images/products/fresh tomatoes.jpg",
       description: "Locally grown tomatoes"
     },
@@ -33,7 +33,7 @@ export default function Products() {
       id: 2,
       name: "Carrots",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 150, // Updated price
       image: "/images/products/carrots.jpg",
       description: "Fresh, crunchy carrots"
     },
@@ -41,7 +41,7 @@ export default function Products() {
       id: 3,
       name: "Cabbage",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 35, // Updated price
       image: "/images/products/cabbage.jpg",
       description: "Fresh, crisp cabbage"
     },
@@ -49,7 +49,7 @@ export default function Products() {
       id: 4,
       name: "Apples",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 450, // Updated price
       image: "/images/products/apples.jpg",
       description: "Sweet and juicy apples"
     },
@@ -57,7 +57,7 @@ export default function Products() {
       id: 5,
       name: "Strawberries",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/strawberries.jpeg",
       description: "Sweet and fresh strawberries"
     },
@@ -65,7 +65,7 @@ export default function Products() {
       id: 6,
       name: "Honey",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 1000, // Updated price
       image: "/images/products/honey.jpg",
       description: "Pure, natural honey"
     },
@@ -73,7 +73,7 @@ export default function Products() {
       id: 7,
       name: "Goat Milk",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/goat milk.jpg",
       description: "Fresh, goat milk"
     },
@@ -81,7 +81,7 @@ export default function Products() {
       id: 8,
       name: "Beans",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 300, // Updated price
       image: "/images/products/beans.jpg",
       description: "Fresh beans"
     },
@@ -89,7 +89,7 @@ export default function Products() {
       id: 9,
       name: "Sour Milk",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/Sour Milk.jpg",
       description: "Premium quality sour milk"
     },
@@ -97,7 +97,7 @@ export default function Products() {
       id: 10,
       name: "Spinach",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 25, // Updated price
       image: "/images/products/spinach.jpg",
       description: "Fresh, organic spinach"
     },
@@ -105,7 +105,7 @@ export default function Products() {
       id: 11,
       name: "Tilapia",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 600, // Updated price
       image: "/images/products/Tilapia Fish.jpg",
       description: "Fresh tilapia fish"
     },
@@ -113,7 +113,7 @@ export default function Products() {
       id: 12,
       name: "Basil",
       category: "herbs",
-      price: 0, // Price set to zero
+      price: 55, // Updated price
       image: "/images/products/basil.jpg",
       description: "Fresh basil leaves"
     },
@@ -121,7 +121,7 @@ export default function Products() {
       id: 13,
       name: "Beef Tallow",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 700, // Updated price
       image: "/images/products/beef tallow.jpg",
       description: "High-quality beef tallow"
     },
@@ -129,7 +129,7 @@ export default function Products() {
       id: 14,
       name: "Capcicum",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 150, // Updated price
       image: "/images/products/capcicum.jpg",
       description: "Fresh capcicum peppers"
     },
@@ -137,7 +137,7 @@ export default function Products() {
       id: 15,
       name: "Chicken",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 1500, // Updated price
       image: "/images/products/chicken.jpg",
       description: "Free-range chicken"
     },
@@ -145,7 +145,7 @@ export default function Products() {
       id: 16,
       name: "Chilly",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/chilly.jpg",
       description: "Spicy chilly peppers"
     },
@@ -153,7 +153,7 @@ export default function Products() {
       id: 17,
       name: "Ghee",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 1200, // Updated price
       image: "/images/products/ghee.jpg",
       description: "Pure ghee"
     },
@@ -161,7 +161,7 @@ export default function Products() {
       id: 18,
       name: "Goat Meat",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 1200, // Updated price
       image: "/images/products/goat.jpg",
       description: "Tender goat meat"
     },
@@ -169,7 +169,7 @@ export default function Products() {
       id: 19,
       name: "Kales",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 25, // Updated price
       image: "/images/products/kales.jpg",
       description: "Fresh kales"
     },
@@ -177,7 +177,7 @@ export default function Products() {
       id: 20,
       name: "Mint",
       category: "herbs",
-      price: 0, // Price set to zero
+      price: 40, // Updated price
       image: "/images/products/mint.jpg",
       description: "Fresh mint leaves"
     },
@@ -185,7 +185,7 @@ export default function Products() {
       id: 21,
       name: "Persley",
       category: "herbs",
-      price: 0, // Price set to zero
+      price: 35, // Updated price
       image: "/images/products/persley.jpg",
       description: "Fresh persley leaves"
     },
@@ -193,7 +193,7 @@ export default function Products() {
       id: 22,
       name: "Pumpkins",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 300, // Updated price
       image: "/images/products/pumkins.jpg",
       description: "Fresh pumpkins"
     },
@@ -201,7 +201,7 @@ export default function Products() {
       id: 23,
       name: "Rosemary",
       category: "herbs",
-      price: 0, // Price set to zero
+      price: 45, // Updated price
       image: "/images/products/Rosemary.jpg",
       description: "Fresh rosemary leaves"
     },
@@ -209,7 +209,7 @@ export default function Products() {
       id: 24,
       name: "Sheep Mutton",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 1000, // Updated price
       image: "/images/products/sheep.jpg",
       description: "Tender sheep mutton"
     },
@@ -217,7 +217,7 @@ export default function Products() {
       id: 25,
       name: "Red Cabbage",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 160, // Updated price
       image: "/images/products/red cabbage.jpg",
       description: "Fresh red cabbage"
     },
@@ -225,7 +225,7 @@ export default function Products() {
       id: 26,
       name: "Red Onions",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 100, // Updated price
       image: "/images/products/red onions.jpg",
       description: "Fresh red onions"
     },
@@ -233,7 +233,7 @@ export default function Products() {
       id: 27,
       name: "White Onions",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 160, // Updated price
       image: "/images/products/white onions.jpg",
       description: "Fresh white onions"
     },
@@ -241,7 +241,7 @@ export default function Products() {
       id: 28,
       name: "Potatoes",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 60, // Updated price
       image: "/images/products/potatoes.jpg",
       description: "Fresh potatoes"
     },
@@ -249,7 +249,7 @@ export default function Products() {
       id: 29,
       name: "Sweet Potatoes",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 90, // Updated price
       image: "/images/products/sweet potatoes.jpg",
       description: "Fresh sweet potatoes"
     },
