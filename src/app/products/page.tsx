@@ -22,67 +22,67 @@ export default function Products() {
   const products: Product[] = [
     {
       id: 1,
-      name: "Fresh Organic Tomatoes",
+      name: "Fresh Tomatoes",
       category: "vegetables",
       price: 150, // Updated market price for large, organic heads
-      image: "/images/products/fresh_organic_tomatoes.jpg",
-      description: "Locally grown organic tomatoes"
+      image: "/images/products/tomatoes.jpg",
+      description: "Locally grown tomatoes"
     },
     {
       id: 2,
-      name: "Organic Carrots",
+      name: "Carrots",
       category: "vegetables",
       price: 150, // Updated market price for organic or premium carrots
-      image: "/images/products/organic_carrots.jpg",
-      description: "Fresh, crunchy organic carrots"
+      image: "/images/products/carrots.jpg",
+      description: "Fresh, crunchy carrots"
     },
     {
       id: 3,
-      name: "Organic Cabbage",
+      name: "Cabbage",
       category: "vegetables",
       price: 150, // Updated market price for large, organic heads
-      image: "/images/products/organic_cabbage.jpg",
-      description: "Fresh, crisp organic cabbage"
+      image: "/images/products/cabbage.jpg",
+      description: "Fresh, crisp cabbage"
     },
     {
       id: 4,
-      name: "Organic Apples",
+      name: "Apples",
       category: "fruits",
       price: 1000, // Updated market price for large, high quality or out of season strawberries
-      image: "/images/products/organic_apples.jpg",
-      description: "Sweet and juicy organic apples"
+      image: "/images/products/apples.jpg",
+      description: "Sweet and juicy apples"
     },
     {
       id: 5,
-      name: "Fresh Strawberries",
+      name: "Strawberries",
       category: "fruits",
       price: 1000, // Updated market price for large, high quality or out of season strawberries
-      image: "/images/products/fresh_strawberries.jpg",
-      description: "Sweet and fresh organic strawberries"
+      image: "/images/products/strawberries.jpeg",
+      description: "Sweet and fresh strawberries"
     },
     {
       id: 6,
-      name: "Organic Honey",
+      name: "Honey",
       category: "dairy",
       price: 1500, // Updated market price for raw, organic, or specialty honey
-      image: "/images/products/organic_honey.jpg",
-      description: "Pure, natural organic honey"
+      image: "/images/products/honey.jpg",
+      description: "Pure, natural honey"
     },
     {
       id: 7,
-      name: "Fresh Goat Milk",
+      name: "Goat Milk",
       category: "dairy",
       price: 400, // Updated market price for organic or farm-fresh goat milk
-      image: "/images/products/fresh_goat_milk.jpg",
-      description: "Fresh, organic goat milk"
+      image: "/images/products/goat milk.jpg",
+      description: "Fresh, goat milk"
     },
     {
       id: 8,
-      name: "Organic Beans",
+      name: "Beans",
       category: "grains",
       price: 300, // Updated market price for imported or specialty varieties
-      image: "/images/products/organic_beans.jpg",
-      description: "Fresh organic beans"
+      image: "/images/products/beans.jpg",
+      description: "Fresh beans"
     }
   ];
 
@@ -142,10 +142,10 @@ export default function Products() {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
+                <h3 className="text-lg font-semibold mb-2 text-black">{product.name}</h3>
                 <p className="text-gray-600 text-sm mb-2">{product.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-green-600 font-bold">${product.price.toFixed(2)}</span>
+                  <span className="text-green-600 font-bold">Ksh{product.price.toFixed(2)}</span>
                   <button 
                     onClick={() => addItem(product)}
                     className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
