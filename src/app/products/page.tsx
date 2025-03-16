@@ -22,7 +22,7 @@ export default function Products() {
   const products: Product[] = [
     {
       id: 1,
-      name: "Fresh Tomatoes",
+      name: "Tomatoes",
       category: "vegetables",
       price: 150, // Updated market price for large, organic heads
       image: "/images/products/tomatoes.jpg",
@@ -48,7 +48,7 @@ export default function Products() {
       id: 4,
       name: "Apples",
       category: "fruits",
-      price: 1000, // Updated market price for large, high quality or out of season strawberries
+      price: 449, // Updated price per kg
       image: "/images/products/apples.jpg",
       description: "Sweet and juicy apples"
     },
@@ -56,7 +56,7 @@ export default function Products() {
       id: 5,
       name: "Strawberries",
       category: "fruits",
-      price: 1000, // Updated market price for large, high quality or out of season strawberries
+      price: 299, // Updated price per punnet
       image: "/images/products/strawberries.jpeg",
       description: "Sweet and fresh strawberries"
     },
@@ -96,14 +96,14 @@ export default function Products() {
       id: 10,
       name: "Spinach",
       category: "vegetables",
-      price: 50, // Market price for large, organic bunches
+      price: 19, // Updated price per bunch
       image: "/images/products/spinach.jpg",
       description: "Fresh, organic spinach"
     },
     {
       id: 11,
       name: "Tilapia",
-      category: "seafood",
+      category: "fish",
       price: 800, // Market price for fresh, large tilapia
       image: "/images/products/Tilapia Fish.jpg",
       description: "Fresh tilapia fish"
@@ -128,7 +128,7 @@ export default function Products() {
       id: 14,
       name: "Capcicum",
       category: "vegetables",
-      price: 400, // Market price for colored, imported, or organic peppers
+      price: 329, // Updated price per kg
       image: "/images/products/capcicum.jpg",
       description: "Fresh capcicum peppers"
     },
@@ -176,7 +176,7 @@ export default function Products() {
       id: 20,
       name: "Mint",
       category: "herbs",
-      price: 50, // Market price for large, fresh, or organic bunches
+      price: 29, // Updated price per bunch
       image: "/images/products/mint.jpg",
       description: "Fresh mint leaves"
     },
@@ -211,6 +211,302 @@ export default function Products() {
       price: 1500, // Market price for prime cuts or organic mutton
       image: "/images/products/sheep.jpg",
       description: "Tender sheep mutton"
+    },
+    {
+      id: 25,
+      name: "Red Cabbage",
+      category: "vegetables",
+      price: 150, // Example price
+      image: "/images/products/red cabbage.jpg",
+      description: "Fresh red cabbage"
+    },
+    {
+      id: 26,
+      name: "Red Onions",
+      category: "vegetables",
+      price: 99, // Updated price per kg
+      image: "/images/products/red onions.jpg",
+      description: "Fresh red onions"
+    },
+    {
+      id: 27,
+      name: "White Onions",
+      category: "vegetables",
+      price: 149, // Updated price per kg
+      image: "/images/products/white onions.jpg",
+      description: "Fresh white onions"
+    },
+    {
+      id: 28,
+      name: "Potatoes",
+      category: "vegetables",
+      price: 119, // Updated price per kg
+      image: "/images/products/potatoes.jpg",
+      description: "Fresh potatoes"
+    },
+    {
+      id: 29,
+      name: "Sweet Potatoes",
+      category: "vegetables",
+      price: 179, // Updated price per kg
+      image: "/images/products/sweet potatoes.jpg",
+      description: "Fresh sweet potatoes"
+    },
+    {
+      id: 30,
+      name: "Arrowroots",
+      category: "vegetables",
+      price: 150, // Example price
+      image: "/images/products/arrowroots.jpg",
+      description: "Fresh arrowroots"
+    },
+    {
+      id: 31,
+      name: "Thyme",
+      category: "herbs",
+      price: 50, // Example price
+      image: "/images/products/thyme.jpg",
+      description: "Fresh thyme"
+    },
+    {
+      id: 32,
+      name: "Spring Onions",
+      category: "vegetables",
+      price: 60, // Example price
+      image: "/images/products/spring onions.jpg",
+      description: "Fresh spring onions"
+    },
+    {
+      id: 33,
+      name: "Kunde",
+      category: "vegetables",
+      price: 70, // Example price
+      image: "/images/products/kunde.jpg",
+      description: "Fresh kunde"
+    },
+    {
+      id: 34,
+      name: "Gooseberries",
+      category: "fruits",
+      price: 199, // Updated price per punnet
+      image: "/images/products/gooseberries.jpg",
+      description: "Fresh gooseberries"
+    },
+    {
+      id: 35,
+      name: "Ripe Bananas",
+      category: "fruits",
+      price: 89, // Updated price per kg
+      image: "/images/products/ripe bananas.jpg",
+      description: "Fresh ripe bananas"
+    },
+    {
+      id: 36,
+      name: "Matoke Bananas",
+      category: "fruits",
+      price: 169, // Updated price per kg
+      image: "/images/products/matoke bananas.jpg",
+      description: "Fresh matoke bananas"
+    },
+    {
+      id: 37,
+      name: "Sweet Bananas",
+      category: "fruits",
+      price: 199, // Updated price per kg
+      image: "/images/products/sweet bananas.jpg",
+      description: "Fresh sweet bananas"
+    },
+    {
+      id: 38,
+      name: "Avocado",
+      category: "fruits",
+      price: 179, // Updated price per kg
+      image: "/images/products/avocado.jpg",
+      description: "Fresh avocado"
+    },
+    {
+      id: 39,
+      name: "Dry Maize",
+      category: "grains",
+      price: 50, // Updated price per kg
+      image: "/images/products/dry maize.jpg",
+      description: "Fresh dry maize"
+    },
+    {
+      id: 40,
+      name: "Wheat",
+      category: "grains",
+      price: 100, // Updated price per kg
+      image: "/images/products/wheat.jpg",
+      description: "Fresh wheat"
+    },
+    {
+      id: 41,
+      name: "Sorghum",
+      category: "grains",
+      price: 200, // Updated price per kg
+      image: "/images/products/sorghum.jpg",
+      description: "Fresh sorghum"
+    },
+    {
+      id: 42,
+      name: "Finger Millet",
+      category: "grains",
+      price: 250, // Updated price per kg
+      image: "/images/products/Finger Millet.jpg",
+      description: "Fresh finger millet"
+    },
+    {
+      id: 43,
+      name: "Cassava",
+      category: "grains",
+      price: 100, // Updated price per kg
+      image: "/images/products/Cassava.jpg",
+      description: "Fresh cassava"
+    },
+    {
+      id: 44,
+      name: "Ground Nuts",
+      category: "grains",
+      price: 160, // Updated price per kg
+      image: "/images/products/ground nuts.jpg",
+      description: "Fresh ground nuts"
+    },
+    {
+      id: 45,
+      name: "Managu",
+      category: "vegetables",
+      price: 29, // Updated price per bunch
+      image: "/images/products/managu.jpg",
+      description: "Fresh managu"
+    },
+    {
+      id: 46,
+      name: "Saga",
+      category: "vegetables",
+      price: 30, // Updated price per bunch
+      image: "/images/products/Saga.jpg",
+      description: "Fresh saga"
+    },
+    {
+      id: 47,
+      name: "Terere",
+      category: "vegetables",
+      price: 29, // Updated price per bunch
+      image: "/images/products/terere.jpg",
+      description: "Fresh terere"
+    },
+    {
+      id: 48,
+      name: "Mrenda",
+      category: "vegetables",
+      price: 30, // Updated price per bunch
+      image: "/images/products/mrenda.jpg",
+      description: "Fresh mrenda"
+    },
+    {
+      id: 49,
+      name: "Nderema",
+      category: "vegetables",
+      price: 30, // Updated price per bunch
+      image: "/images/products/nderema.jpg",
+      description: "Fresh nderema"
+    },
+    {
+      id: 50,
+      name: "Mitoo",
+      category: "vegetables",
+      price: 30, // Updated price per bunch
+      image: "/images/products/Mitoo.jpg",
+      description: "Fresh mitoo"
+    },
+    {
+      id: 51,
+      name: "Pumpkin Leaves",
+      category: "vegetables",
+      price: 70, // Example price
+      image: "/images/products/pumpkin leaves.jpg",
+      description: "Fresh pumpkin leaves"
+    },
+    {
+      id: 52,
+      name: "Kienyeji Eggs",
+      category: "dairy",
+      price: 25, // Updated price per egg
+      image: "/images/products/Kienyeji eggs.jpg",
+      description: "Fresh kienyeji eggs"
+    },
+    {
+      id: 53,
+      name: "Broccoli",
+      category: "vegetables",
+      price: 199, // Updated price per kg
+      image: "/images/products/Broccoli.jpg",
+      description: "Fresh broccoli"
+    },
+    {
+      id: 54,
+      name: "Cauliflower",
+      category: "vegetables",
+      price: 199, // Updated price per kg
+      image: "/images/products/cauliflower.jpg",
+      description: "Fresh cauliflower"
+    },
+    {
+      id: 55,
+      name: "Dhania",
+      category: "herbs",
+      price: 29, // Updated price per bunch
+      image: "/images/products/Dhania.jpg",
+      description: "Fresh dhania"
+    },
+    {
+      id: 56,
+      name: "Leeks",
+      category: "vegetables",
+      price: 100, // Example price
+      image: "/images/products/leeks.jpg",
+      description: "Fresh leeks"
+    },
+    {
+      id: 57,
+      name: "Celery",
+      category: "vegetables",
+      price: 279, // Updated price per kg
+      image: "/images/products/celery.jpg",
+      description: "Fresh celery"
+    },
+    {
+      id: 58,
+      name: "Cucumber",
+      category: "vegetables",
+      price: 159, // Updated price per kg
+      image: "/images/products/cucumber.jpg",
+      description: "Fresh cucumber"
+    },
+    {
+      id: 59,
+      name: "Chinese Cabbage",
+      category: "vegetables",
+      price: 169, // Updated price per kg
+      image: "/images/products/Chinese Cabbage.jpg",
+      description: "Fresh Chinese cabbage"
+    },
+    {
+      id: 60,
+      name: "Egg Plant",
+      category: "vegetables",
+      price: 159, // Updated price per kg
+      image: "/images/products/egg plant.jpg",
+      description: "Fresh egg plant"
+    },
+    {
+      id: 61,
+      name: "Green Peas",
+      category: "vegetables",
+      price: 169, // Updated price per kg
+      image: "/images/products/Green peas.jpg",
+      description: "Fresh green peas"
     }
   ];
 
