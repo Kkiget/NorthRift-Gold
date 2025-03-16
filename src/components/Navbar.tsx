@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [cartCount, setCartCount] = useState(0);
+    const [cartCount] = useState(0);
 
     return (
         <header className="sticky top-0 bg-white shadow-md z-50">

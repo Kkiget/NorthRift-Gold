@@ -120,7 +120,7 @@ export default function About() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
           <p className="text-xl mb-8">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
           <button className="bg-white text-green-600 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors">
             Contact Us
