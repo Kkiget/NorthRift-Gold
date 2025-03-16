@@ -83,10 +83,138 @@ export default function Products() {
       price: 300, // Updated market price for imported or specialty varieties
       image: "/images/products/beans.jpg",
       description: "Fresh beans"
+    },
+    {
+      id: 9,
+      name: "Sour Milk",
+      category: "dairy",
+      price: 200, // Market price for premium brands or organic mala
+      image: "/images/products/Sour Milk.jpg",
+      description: "Premium quality sour milk"
+    },
+    {
+      id: 10,
+      name: "Spinach",
+      category: "vegetables",
+      price: 50, // Market price for large, organic bunches
+      image: "/images/products/spinach.jpg",
+      description: "Fresh, organic spinach"
+    },
+    {
+      id: 11,
+      name: "Tilapia",
+      category: "seafood",
+      price: 800, // Market price for fresh, large tilapia
+      image: "/images/products/Tilapia Fish.jpg",
+      description: "Fresh tilapia fish"
+    },
+    {
+      id: 12,
+      name: "Basil",
+      category: "herbs",
+      price: 50, // Market price for large, fresh, or organic bunches
+      image: "/images/products/basil.jpg",
+      description: "Fresh basil leaves"
+    },
+    {
+      id: 13,
+      name: "Beef Tallow",
+      category: "meat",
+      price: 800, // Market price for beef tallow from a reputable butcher
+      image: "/images/products/beef tallow.jpg",
+      description: "High-quality beef tallow"
+    },
+    {
+      id: 14,
+      name: "Capcicum",
+      category: "vegetables",
+      price: 400, // Market price for colored, imported, or organic peppers
+      image: "/images/products/capcicum.jpg",
+      description: "Fresh capcicum peppers"
+    },
+    {
+      id: 15,
+      name: "Chicken",
+      category: "meat",
+      price: 1500, // Market price for free-range, organic chicken
+      image: "/images/products/chicken.jpg",
+      description: "Free-range chicken"
+    },
+    {
+      id: 16,
+      name: "Chilly",
+      category: "vegetables",
+      price: 400, // Market price for rare or high-quality varieties
+      image: "/images/products/chilly.jpg",
+      description: "Spicy chilly peppers"
+    },
+    {
+      id: 17,
+      name: "Ghee",
+      category: "dairy",
+      price: 2000, // Market price for imported, organic, or artisanal ghee
+      image: "/images/products/ghee.jpg",
+      description: "Pure ghee"
+    },
+    {
+      id: 18,
+      name: "Goat Meat",
+      category: "meat",
+      price: 1200, // Market price for prime cuts or organic goat meat
+      image: "/images/products/goat.jpg",
+      description: "Tender goat meat"
+    },
+    {
+      id: 19,
+      name: "Kales",
+      category: "vegetables",
+      price: 50, // Market price for large, organic bunches
+      image: "/images/products/kales.jpg",
+      description: "Fresh kales"
+    },
+    {
+      id: 20,
+      name: "Mint",
+      category: "herbs",
+      price: 50, // Market price for large, fresh, or organic bunches
+      image: "/images/products/mint.jpg",
+      description: "Fresh mint leaves"
+    },
+    {
+      id: 21,
+      name: "Persley",
+      category: "herbs",
+      price: 50, // Market price for high-quality bunches
+      image: "/images/products/persley.jpg",
+      description: "Fresh persley leaves"
+    },
+    {
+      id: 22,
+      name: "Pumpkins",
+      category: "vegetables",
+      price: 300, // Market price for large, specialty pumpkins
+      image: "/images/products/pumkins.jpg",
+      description: "Fresh pumpkins"
+    },
+    {
+      id: 23,
+      name: "Rosemary",
+      category: "herbs",
+      price: 100, // Market price for organic or large, fresh bunches
+      image: "/images/products/Rosemary.jpg",
+      description: "Fresh rosemary leaves"
+    },
+    {
+      id: 24,
+      name: "Sheep Mutton",
+      category: "meat",
+      price: 1500, // Market price for prime cuts or organic mutton
+      image: "/images/products/sheep.jpg",
+      description: "Tender sheep mutton"
     }
   ];
 
-  const categories = ['all', 'vegetables', 'fruits', 'grains', 'dairy'];
+  const categories = ['all', 'vegetables', 'fruits', 'grains', 'dairy', 'Fish', 'herbs', 'meat'];
 
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
