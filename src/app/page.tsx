@@ -35,9 +35,9 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative h-auto flex flex-col md:flex-row items-center mt-8">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl">
+      <section className="relative h-screen flex flex-col justify-center items-center mt-8">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 text-black">Fresh. Organic. Sustainable.</h1>
             <p className="text-lg mb-8 text-gray-700">100% Trusted Platform</p>
             <Link 
@@ -47,9 +47,7 @@ export default function Home() {
               Buy our Products Today
             </Link>
           </div>
-        </div>
-        <div className="absolute right-0 top-0 h-full flex items-center">
-          <div className="grid grid-rows-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
             <Image
               src="/images/hero/farmer.jpg"
               alt="Farmer holding fresh produce"
@@ -58,22 +56,20 @@ export default function Home() {
               className="object-cover rounded-lg"
               priority
             />
-            <div className="grid grid-cols-2 gap-2">
-              <Image
-                src="/images/hero/preview1.jpg"
-                alt="Farm landscape"
-                width={240}
-                height={200}
-                className="object-cover rounded-lg"
-              />
-              <Image
-                src="/images/hero/preview2.jpg"
-                alt="Fresh vegetables"
-                width={240}
-                height={200}
-                className="object-cover rounded-lg"
-              />
-            </div>
+            <Image
+              src="/images/hero/preview1.jpg"
+              alt="Farm landscape"
+              width={240}
+              height={200}
+              className="object-cover rounded-lg"
+            />
+            <Image
+              src="/images/hero/preview2.jpg"
+              alt="Fresh vegetables"
+              width={240}
+              height={200}
+              className="object-cover rounded-lg"
+            />
           </div>
         </div>
       </section>
