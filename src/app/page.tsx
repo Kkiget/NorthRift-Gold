@@ -35,41 +35,29 @@ export default function Home() {
   return (
     <main className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative h-screen flex flex-col justify-center items-center mt-8">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative h-screen flex flex-col justify-center items-center mt-8 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero/farmer.jpg)', animation: 'fade 10s infinite', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+        <style jsx>{`
+          @keyframes fade {
+            0% { background-image: url(/images/hero/farmer.jpg); }
+            33% { background-image: url(/images/hero/preview1.jpg); }
+            66% { background-image: url(/images/hero/preview2.jpg); }
+            100% { background-image: url(/images/hero/farmer.jpg); }
+          }
+          @media (max-width: 768px) {
+            h1 { font-size: 3xl; }
+            p { font-size: md; }
+          }
+        `}</style>
+        <div className="container mx-auto px-4 text-center bg-opacity-50 bg-black">
           <div className="max-w-2xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6 text-green-700">Fresh. Organic. Sustainable.</h1>
-            <p className="text-lg mb-8 text-gray-600">100% Trusted Platform</p>
+            <h1 className="text-5xl font-bold mb-6 text-white">Fresh. Organic. Sustainable.</h1>
+            <p className="text-lg mb-8 text-white">100% Trusted Platform</p>
             <Link 
               href="/products"
-              className="bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-colors inline-block"
+              className="bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-colors inline-block animate-bounce"
             >
               Buy our Products Today
             </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <Image
-              src="/images/hero/farmer.jpg"
-              alt="Farmer holding fresh produce"
-              width={500}
-              height={400}
-              className="object-cover rounded-lg"
-              priority
-            />
-            <Image
-              src="/images/hero/preview1.jpg"
-              alt="Farm landscape"
-              width={240}
-              height={200}
-              className="object-cover rounded-lg"
-            />
-            <Image
-              src="/images/hero/preview2.jpg"
-              alt="Fresh vegetables"
-              width={240}
-              height={200}
-              className="object-cover rounded-lg"
-            />
           </div>
         </div>
       </section>
@@ -100,6 +88,7 @@ export default function Home() {
                 width={300}
                 height={200}
                 className="object-cover rounded-lg"
+                loading="lazy"
               />
               <Image
                 src="/images/about/about2.jpg"
@@ -107,6 +96,7 @@ export default function Home() {
                 width={300}
                 height={200}
                 className="object-cover rounded-lg"
+                loading="lazy"
               />
             </div>
           </div>
@@ -126,13 +116,14 @@ export default function Home() {
                     alt={product.name}
                     fill
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-2 text-green-700">{product.name}</h3>
                   <p className="text-gray-600 text-sm mb-2">{product.description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-green-600 font-bold">${product.price.toFixed(2)}</span>
+                    <span className="text-green-600 font-bold">KSh{product.price.toFixed(2)}</span>
                     <button 
                       onClick={() => addItem(product)}
                       className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
