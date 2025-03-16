@@ -72,7 +72,7 @@ export default function Checkout() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold">{item.name}</h3>
-                    <p className="text-gray-600">${item.price.toFixed(2)}</p>
+                    <p className="text-gray-600">KSh{item.price.toFixed(2)}</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <button
@@ -101,7 +101,7 @@ export default function Checkout() {
             <div className="mt-6 pt-6 border-t">
               <div className="flex justify-between text-lg font-semibold">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>KSh{total.toFixed(2)}</span>
               </div>
             </div>
           </div>
