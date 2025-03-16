@@ -257,7 +257,7 @@ export default function Products() {
       id: 30,
       name: "Arrowroots",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 100, // Updated price
       image: "/images/products/arrowroots.jpg",
       description: "Fresh arrowroots"
     },
@@ -265,7 +265,7 @@ export default function Products() {
       id: 31,
       name: "Thyme",
       category: "herbs",
-      price: 0, // Price set to zero
+      price: 35, // Updated price
       image: "/images/products/thyme.jpg",
       description: "Fresh thyme"
     },
@@ -273,7 +273,7 @@ export default function Products() {
       id: 32,
       name: "Spring Onions",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 25, // Updated price
       image: "/images/products/spring onions.jpg",
       description: "Fresh spring onions"
     },
@@ -281,7 +281,7 @@ export default function Products() {
       id: 33,
       name: "Kunde",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 30, // Updated price
       image: "/images/products/kunde.jpg",
       description: "Fresh kunde"
     },
@@ -289,7 +289,7 @@ export default function Products() {
       id: 34,
       name: "Gooseberries",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/gooseberries.jpg",
       description: "Fresh gooseberries"
     },
@@ -297,7 +297,7 @@ export default function Products() {
       id: 35,
       name: "Ripe Bananas",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 90, // Updated price
       image: "/images/products/ripe bananas.jpg",
       description: "Fresh ripe bananas"
     },
@@ -305,7 +305,7 @@ export default function Products() {
       id: 36,
       name: "Matoke Bananas",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 170, // Updated price
       image: "/images/products/matoke bananas.jpg",
       description: "Fresh matoke bananas"
     },
@@ -313,7 +313,7 @@ export default function Products() {
       id: 37,
       name: "Sweet Bananas",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/sweet bananas.jpg",
       description: "Fresh sweet bananas"
     },
@@ -321,7 +321,7 @@ export default function Products() {
       id: 38,
       name: "Avocado",
       category: "fruits",
-      price: 0, // Price set to zero
+      price: 180, // Updated price
       image: "/images/products/avocado.jpg",
       description: "Fresh avocado"
     },
@@ -329,7 +329,7 @@ export default function Products() {
       id: 39,
       name: "Dry Maize",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 100, // Updated price
       image: "/images/products/dry maize.jpg",
       description: "Fresh dry maize"
     },
@@ -337,7 +337,7 @@ export default function Products() {
       id: 40,
       name: "Wheat",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 100, // Updated price
       image: "/images/products/wheat.jpg",
       description: "Fresh wheat"
     },
@@ -345,7 +345,7 @@ export default function Products() {
       id: 41,
       name: "Sorghum",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 100, // Updated price
       image: "/images/products/sorghum.jpg",
       description: "Fresh sorghum"
     },
@@ -353,7 +353,7 @@ export default function Products() {
       id: 42,
       name: "Finger Millet",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 270, // Updated price
       image: "/images/products/Finger Millet.jpg",
       description: "Fresh finger millet"
     },
@@ -361,7 +361,7 @@ export default function Products() {
       id: 43,
       name: "Cassava",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 110, // Updated price
       image: "/images/products/Cassava.jpg",
       description: "Fresh cassava"
     },
@@ -369,7 +369,7 @@ export default function Products() {
       id: 44,
       name: "Ground Nuts",
       category: "grains",
-      price: 0, // Price set to zero
+      price: 160, // Updated price
       image: "/images/products/ground nuts.jpg",
       description: "Fresh ground nuts"
     },
@@ -377,7 +377,7 @@ export default function Products() {
       id: 45,
       name: "Managu",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 35, // Updated price
       image: "/images/products/managu.jpg",
       description: "Fresh managu"
     },
@@ -385,7 +385,7 @@ export default function Products() {
       id: 46,
       name: "Saga",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 30, // Updated price
       image: "/images/products/Saga.jpg",
       description: "Fresh saga"
     },
@@ -393,7 +393,7 @@ export default function Products() {
       id: 47,
       name: "Terere",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 40, // Updated price
       image: "/images/products/terere.jpg",
       description: "Fresh terere"
     },
@@ -401,7 +401,7 @@ export default function Products() {
       id: 48,
       name: "Mrenda",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 30, // Updated price
       image: "/images/products/mrenda.jpg",
       description: "Fresh mrenda"
     },
@@ -409,7 +409,7 @@ export default function Products() {
       id: 49,
       name: "Nderema",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 30, // Updated price
       image: "/images/products/nderema.jpg",
       description: "Fresh nderema"
     },
@@ -417,7 +417,7 @@ export default function Products() {
       id: 50,
       name: "Mitoo",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 50, // Updated price
       image: "/images/products/Mitoo.jpg",
       description: "Fresh mitoo"
     },
@@ -425,7 +425,7 @@ export default function Products() {
       id: 51,
       name: "Pumpkin Leaves",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 40, // Updated price
       image: "/images/products/pumpkin leaves.jpg",
       description: "Fresh pumpkin leaves"
     },
@@ -433,7 +433,7 @@ export default function Products() {
       id: 52,
       name: "Kienyeji Eggs",
       category: "Animal products",
-      price: 0, // Price set to zero
+      price: 750, // Updated price
       image: "/images/products/Kienyeji eggs.jpg",
       description: "Fresh kienyeji eggs"
     },
@@ -441,7 +441,7 @@ export default function Products() {
       id: 53,
       name: "Broccoli",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/Broccoli.jpg",
       description: "Fresh broccoli"
     },
@@ -449,7 +449,7 @@ export default function Products() {
       id: 54,
       name: "Cauliflower",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/cauliflower.jpg",
       description: "Fresh cauliflower"
     },
@@ -457,7 +457,7 @@ export default function Products() {
       id: 55,
       name: "Dhania",
       category: "herbs",
-      price: 0, // Price set to zero
+      price: 25, // Updated price
       image: "/images/products/Dhania.jpg",
       description: "Fresh dhania"
     },
@@ -465,7 +465,7 @@ export default function Products() {
       id: 56,
       name: "Leeks",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 200, // Updated price
       image: "/images/products/leeks.jpg",
       description: "Fresh leeks"
     },
@@ -473,7 +473,7 @@ export default function Products() {
       id: 57,
       name: "Celery",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 280, // Updated price
       image: "/images/products/celery.jpg",
       description: "Fresh celery"
     },
@@ -481,7 +481,7 @@ export default function Products() {
       id: 58,
       name: "Cucumber",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 150, // Updated price
       image: "/images/products/cucumber.jpg",
       description: "Fresh cucumber"
     },
@@ -489,7 +489,7 @@ export default function Products() {
       id: 59,
       name: "Chinese Cabbage",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 175, // Updated price
       image: "/images/products/Chinese Cabbage.jpg",
       description: "Fresh Chinese cabbage"
     },
@@ -497,7 +497,7 @@ export default function Products() {
       id: 60,
       name: "Egg Plant",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 150, // Updated price
       image: "/images/products/egg plant.jpg",
       description: "Fresh egg plant"
     },
@@ -505,7 +505,7 @@ export default function Products() {
       id: 61,
       name: "Green Peas",
       category: "vegetables",
-      price: 0, // Price set to zero
+      price: 450, // Updated price
       image: "/images/products/Green peas.jpg",
       description: "Fresh green peas"
     }
