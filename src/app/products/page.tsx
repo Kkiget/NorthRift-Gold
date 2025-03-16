@@ -609,8 +609,8 @@ export default function Products() {
                   )}
                   {product.name === 'Kienyeji Eggs' && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, 'per tray')} className="px-2 py-1 border rounded">Per Tray</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1/2 tray')} className="px-2 py-1 border rounded">1/2 Tray</button>
+                      <button onClick={() => handleQuantityChange(product.id, 'Full')} className="px-2 py-1 border rounded">Full</button>
+                      <button onClick={() => handleQuantityChange(product.id, 'Half')} className="px-2 py-1 border rounded">Half</button>
                     </>
                   )}
                   {product.name === 'Apples' && (
