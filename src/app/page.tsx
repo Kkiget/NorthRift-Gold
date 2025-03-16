@@ -36,26 +36,43 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero/hero-bg.jpg"
-            alt="Fresh produce background"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-5xl font-bold mb-6">Fresh & Sustainable Produce</h1>
-            <p className="text-xl mb-8">Discover our selection of locally grown, organic products that nourish your body and support local farmers.</p>
+          <div className="max-w-2xl">
+            <h1 className="text-5xl font-bold mb-6 text-black">Fresh. Organic. Sustainable.</h1>
+            <p className="text-lg mb-8 text-gray-700">100% Trusted Platform</p>
             <Link 
               href="/products"
               className="bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-colors inline-block"
             >
-              Shop Now
+              Buy our Products Today
             </Link>
+          </div>
+        </div>
+        <div className="absolute right-0 top-0 h-full flex items-center">
+          <div className="grid grid-cols-1 gap-4">
+            <Image
+              src="/images/hero/main-image.jpg"
+              alt="Main Image"
+              width={500}
+              height={400}
+              className="object-cover rounded-lg"
+            />
+            <div className="grid grid-cols-2 gap-2">
+              <Image
+                src="/images/hero/sub-image1.jpg"
+                alt="Sub Image 1"
+                width={240}
+                height={200}
+                className="object-cover rounded-lg"
+              />
+              <Image
+                src="/images/hero/sub-image2.jpg"
+                alt="Sub Image 2"
+                width={240}
+                height={200}
+                className="object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
