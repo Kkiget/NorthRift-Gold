@@ -14,7 +14,7 @@ export default function CartButton() {
       <i className="fas fa-shopping-cart"></i>
       <span>Cart ({itemCount})</span>
       {itemCount > 0 && (
-        <span className="text-sm">| ${total.toFixed(2)}</span>
+        <span className="text-sm">| KSh{total.toFixed(2)}</span>
       )}
     </Link>
   );
