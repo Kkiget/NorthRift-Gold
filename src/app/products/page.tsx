@@ -524,13 +524,15 @@ export default function Products() {
   };
 
   const getPrice = (product: Product) => {
-    const quantity = selectedQuantity[product.id] || 'per tray';
+    const quantity = selectedQuantity[product.id] || 'per item';
     const basePrice = product.price;
     switch (quantity) {
       case '500 g':
         return basePrice / 2;
       case '250 g':
         return basePrice / 4;
+      case '200 g':
+        return basePrice / 5;
       case 'per bunch':
         return basePrice;
       case 'per item':
@@ -539,6 +541,16 @@ export default function Products() {
         return basePrice * 30; // Assuming 30 eggs per tray
       case '1/2 tray':
         return basePrice * 15; // Assuming 15 eggs per half tray
+      case '1 kg':
+        return basePrice;
+      case '1 litre':
+        return basePrice;
+      case '800 g':
+        return basePrice;
+      case 'Full':
+        return basePrice;
+      case 'Half':
+        return basePrice / 2;
       default:
         return basePrice;
     }
