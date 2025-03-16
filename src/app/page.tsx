@@ -51,7 +51,7 @@ export default function Home() {
         <div className="absolute right-0 top-0 h-full flex items-center">
           <div className="grid grid-cols-1 gap-4">
             <Image
-              src="/images/hero/main-image.jpg"
+              src="/images/hero/farmer.jpg"
               alt="Main Image"
               width={500}
               height={400}
@@ -59,16 +59,69 @@ export default function Home() {
             />
             <div className="grid grid-cols-2 gap-2">
               <Image
-                src="/images/hero/sub-image1.jpg"
+                src="/images/hero/preview1.jpg"
                 alt="Sub Image 1"
                 width={240}
                 height={200}
                 className="object-cover rounded-lg"
               />
               <Image
-                src="/images/hero/sub-image2.jpg"
+                src="/images/hero/preview2.jpg"
                 alt="Sub Image 2"
                 width={240}
+                height={200}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-green-600">At Organic</h2>
+              <p className="text-lg text-gray-700">
+                We are passionate about growing fresh, chemical-free produce. Nestled in the heart of nature, our farm uses sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
+              </p>
+              <p className="text-sm text-gray-500">
+                We are dedicated to providing fresh, chemical-free produce through sustainable farming. Nestled in nature, our farm prioritizes protecting the environment while delivering healthy, high-quality food to your table.
+              </p>
+              <Link 
+                href="/about"
+                className="bg-transparent border border-green-600 text-green-600 px-6 py-2 rounded-full hover:bg-green-600 hover:text-white transition-colors inline-block"
+              >
+                Learn More
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <Image
+                src="/images/about/about1.jpg"
+                alt="Image 1"
+                width={300}
+                height={200}
+                className="object-cover rounded-lg"
+              />
+              <Image
+                src="/images/about/about2.jpg"
+                alt="Image 2"
+                width={300}
+                height={200}
+                className="object-cover rounded-lg"
+              />
+              <Image
+                src="/images/about/about3.jpg"
+                alt="Image 3"
+                width={300}
+                height={200}
+                className="object-cover rounded-lg"
+              />
+              <Image
+                src="/images/about/about5.jpeg"
+                alt="Image 4"
+                width={300}
                 height={200}
                 className="object-cover rounded-lg"
               />
