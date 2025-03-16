@@ -17,6 +17,7 @@ export default function Products() {
   const { addItem } = useCart();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedQuantity, setSelectedQuantity] = useState<{ [key: number]: string }>({});
 
   // Sample products data with actual images
   const products: Product[] = [
@@ -518,6 +519,27 @@ export default function Products() {
     return matchesSearch && matchesCategory;
   });
 
+  const handleQuantityChange = (productId: number, quantity: string) => {
+    setSelectedQuantity((prev: { [key: number]: string }) => ({ ...prev, [productId]: quantity }));
+  };
+
+  const getPrice = (product: Product) => {
+    const quantity = selectedQuantity[product.id] || '1 kg';
+    const basePrice = product.price;
+    switch (quantity) {
+      case '500 ml':
+        return basePrice / 2;
+      case '500 g':
+        return basePrice / 2;
+      case 'per head':
+        return basePrice;
+      case 'per bunch':
+        return basePrice;
+      default:
+        return basePrice;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
@@ -568,15 +590,38 @@ export default function Products() {
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2 text-black">{product.name}</h3>
                 <p className="text-gray-600 text-sm mb-2">{product.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-green-600 font-bold">Ksh{product.price.toFixed(2)}</span>
-                  <button 
-                    onClick={() => addItem(product)}
-                    className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
-                  >
-                    Add to Cart
-                  </button>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-green-600 font-bold">Ksh{getPrice(product).toFixed(2)}</span>
                 </div>
+                <div className="flex gap-2 mb-2">
+                  {product.category === 'Animal products' && (
+                    <>
+                      <button onClick={() => handleQuantityChange(product.id, '1 litre')} className="px-2 py-1 border rounded">1 litre</button>
+                      <button onClick={() => handleQuantityChange(product.id, '500 ml')} className="px-2 py-1 border rounded">500 ml</button>
+                    </>
+                  )}
+                  {product.category === 'vegetables' && product.name === 'Cabbage' && (
+                    <button onClick={() => handleQuantityChange(product.id, 'per head')} className="px-2 py-1 border rounded">Per Head</button>
+                  )}
+                  {product.category === 'grains' && (
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                  )}
+                  {product.category === 'herbs' || product.category === 'vegetables' && product.name !== 'Cabbage' && (
+                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Per Bunch</button>
+                  )}
+                  {product.category === 'vegetables' && product.name !== 'Cabbage' && (
+                    <>
+                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
+                    </>
+                  )}
+                </div>
+                <button 
+                  onClick={() => addItem(product)}
+                  className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           ))}
