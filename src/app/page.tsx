@@ -73,7 +73,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
             <div className="space-y-4 md:col-span-3">
-              <h2 className="text-3xl font-bold text-green-700">At Organic</h2>
+              <h2 className="text-3xl font-bold text-green-700">At NorthRift Gold Farm</h2>
               <p className="text-lg text-gray-600">
                 We are passionate about growing fresh, chemical-free produce. Nestled in the heart of nature, our farm uses sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
               </p>
