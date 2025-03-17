@@ -10,25 +10,25 @@ export default function Home() {
   // Featured products for the homepage
   const featuredProducts = [
     {
-      id: 1,
-      name: "Fresh Organic Tomatoes",
-      price: 4.99,
-      image: "/images/products/Produce4.jpg",
-      description: "Locally grown organic tomatoes"
+      id: 6,
+      name: "Honey",
+      price: 1000,
+      image: "/images/products/honey.jpg",
+      description: "Pure, natural honey"
     },
     {
-      id: 2,
-      name: "Organic Carrots",
-      price: 3.99,
-      image: "/images/products/carrots.jpg",
-      description: "Fresh, crunchy organic carrots"
+      id: 13,
+      name: "Beef Tallow",
+      price: 700,
+      image: "/images/products/beef tallow.jpg",
+      description: "High-quality beef tallow"
     },
     {
-      id: 3,
-      name: "Organic Apples",
-      price: 6.99,
-      image: "/images/products/apples.jpg",
-      description: "Sweet and juicy organic apples"
+      id: 15,
+      name: "Chicken",
+      price: 1500,
+      image: "/images/products/chicken.jpg",
+      description: "Free-range chicken"
     }
   ];
 
