@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CartButton from './CartButton';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,10 +21,10 @@ export default function Navbar() {
                             height={50}
                             className="w-auto h-auto"
                         />
-                        <div className="font-['Orbitron']">
-                            <span className="text-xl font-bold">NorthRift</span>
-                            <span className="text-xl font-bold text-yellow-600">Gold</span>
-                        </div>
+                        <span style={{ fontFamily: 'BankGothicMediumBT' }} className="text-3xl font-bold tracking-wider">
+                            <span className="text-green-600">NorthRift</span>
+                            <span className="text-yellow-600 ml-1">Gold</span>
+                        </span>
                     </Link>
 
                     <button 
@@ -64,12 +65,7 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className="p-4 md:p-0 flex space-x-4">
-                            <button className="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                                <span>Cart</span>
-                                <span className="bg-white text-green-600 rounded-full w-5 h-5 flex items-center justify-center text-sm">
-                                    {cartCount}
-                                </span>
-                            </button>
+                            <CartButton />
                             <button className="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition-colors">
                                 Checkout
                             </button>
