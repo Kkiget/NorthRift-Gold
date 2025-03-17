@@ -54,24 +54,9 @@ export default function RootLayout({
 
           {children}
 
-          <footer className="bg-gray-800 text-white py-8">
+          <footer className="bg-gray-800 text-white py-12">
             <div className="container mx-auto px-4">
-              <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div className="mb-4 md:mb-0">
-                  <Link href="/" className="flex items-center">
-                    <Image
-                      src="/images/logo.png"
-                      width={40}
-                      height={40}
-                      alt="NorthRift Gold Logo"
-                      className="mr-2"
-                    />
-                    <div className="flex items-center">
-                      <span className="logo-text logo-northrift text-xl font-bold">NORTHRIFT</span>
-                      <span className="logo-text logo-gold text-xl font-bold">GOLD</span>
-                    </div>
-                  </Link>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                   <h3 className="text-xl font-bold mb-4">About Us</h3>
                   <p className="text-gray-300">
@@ -104,8 +89,8 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
-              <div className="text-center text-sm">
-                <p>&copy; {new Date().getFullYear()} <span className="logo-text"><span className="logo-northrift">NORTHRIFT</span><span className="logo-gold">GOLD</span></span>. All rights reserved.</p>
+              <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
+                <p>&copy; {new Date().getFullYear()} NorthRift Gold. All rights reserved.</p>
               </div>
             </div>
           </footer>

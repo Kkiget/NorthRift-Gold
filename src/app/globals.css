@@ -24,22 +24,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-@font-face {
-  font-family: 'BankGothic Md BT';
-  src: url('/fonts/BankGothic-Medium-BT.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.logo-text {
-  font-family: 'BankGothic Md BT', sans-serif;
-}
-
-.logo-northrift {
-  color: #16a34a; /* green-600 */
-}
-
-.logo-gold {
-  color: #FFD700; /* gold color */
-}
