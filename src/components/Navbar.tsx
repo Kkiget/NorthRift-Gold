@@ -12,17 +12,17 @@ export default function Navbar() {
         <header className="sticky top-0 bg-white shadow-md z-50">
             <nav className="container mx-auto px-4 py-4">
                 <div className="flex justify-between items-center">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <Image 
-                            src="/images/logo/Logo.png" 
-                            alt="NorthRift Gold Logo" 
-                            width={50} 
-                            height={50}
-                            className="w-auto h-auto"
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/images/logo.png"
+                            width={40}
+                            height={40}
+                            alt="NorthRift Gold Logo"
+                            className="mr-2"
                         />
-                        <div className="font-['Orbitron']">
-                            <span className="text-xl font-bold">NorthRift</span>
-                            <span className="text-xl font-bold text-yellow-600">Gold</span>
+                        <div className="flex items-center">
+                            <span className="logo-text logo-northrift text-xl font-bold">NORTHRIFT</span>
+                            <span className="logo-text logo-gold text-xl font-bold">GOLD</span>
                         </div>
                     </Link>
 

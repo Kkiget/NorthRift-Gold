@@ -47,6 +47,12 @@ export default function Home() {
             h1 { font-size: 3xl; }
             p { font-size: md; }
           }
+          button {
+            transition: transform 0.2s ease-in-out;
+          }
+          button:hover {
+            transform: scale(1.05);
+          }
         `}</style>
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
@@ -54,7 +60,7 @@ export default function Home() {
             <p className="text-lg mb-8 text-white">100% Trusted Platform</p>
             <Link 
               href="/products"
-              className="bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-colors inline-block animate-bounce"
+              className="bg-green-600 text-white px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-colors inline-block animate-bounce transform hover:scale-105"
             >
               Buy our Products Today
             </Link>
@@ -63,13 +69,16 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-8 mt-8 bg-gray-50">
+      <section className="py-16 mt-8 bg-green-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-            <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="space-y-4 md:col-span-3">
               <h2 className="text-3xl font-bold text-green-700">At Organic</h2>
               <p className="text-lg text-gray-600">
-                We are passionate about growing fresh, chemical-free produce using sustainable farming practices.
+                We are passionate about growing fresh, chemical-free produce. Nestled in the heart of nature, our farm uses sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
+              </p>
+              <p className="text-sm text-gray-500">
+                We are dedicated to providing fresh, chemical-free produce through sustainable farming. Nestled in nature, our farm prioritizes protecting the environment while delivering healthy, high-quality food to your table.
               </p>
               <Link 
                 href="/about"
@@ -77,24 +86,6 @@ export default function Home() {
               >
                 Learn More
               </Link>
-            </div>
-            <div className="grid grid-rows-2 gap-2">
-              <Image
-                src="/images/about/about1.jpg"
-                alt="Beekeeper with honey"
-                width={300}
-                height={200}
-                className="object-cover rounded-lg"
-                loading="lazy"
-              />
-              <Image
-                src="/images/about/about2.jpg"
-                alt="Green leaves"
-                width={300}
-                height={200}
-                className="object-cover rounded-lg"
-                loading="lazy"
-              />
             </div>
           </div>
         </div>
@@ -123,7 +114,7 @@ export default function Home() {
                     <span className="text-green-600 font-bold">KSh{product.price.toFixed(2)}</span>
                     <button 
                       onClick={() => addItem(product)}
-                      className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
+                      className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors transform hover:scale-105"
                     >
                       Add to Cart
                     </button>

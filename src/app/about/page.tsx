@@ -13,7 +13,7 @@ export default function About() {
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">About NorthRift Gold</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">About <span className="logo-text"><span className="logo-northrift">NORTHRIFT</span><span className="logo-gold">GOLD</span></span></h1>
             <p className="text-xl">Your trusted partner in organic and sustainable produce</p>
           </div>
         </div>
@@ -25,7 +25,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <p className="text-gray-600 mb-8">
-              Founded in 2020, NorthRift Gold was born from a passion for sustainable agriculture and a commitment to providing the highest quality organic produce to our community. We work directly with local farmers who share our values of environmental stewardship and sustainable farming practices.
+              Founded in 2020, <span className="logo-text"><span className="logo-northrift">NORTHRIFT</span><span className="logo-gold">GOLD</span></span> was born from a passion for sustainable agriculture and a commitment to providing the highest quality organic produce to our community. We work directly with local farmers who share our values of environmental stewardship and sustainable farming practices.
             </p>
             <p className="text-gray-600">
               Our mission is to make organic, sustainably-grown produce accessible to everyone while supporting local farmers and promoting environmentally responsible farming practices.

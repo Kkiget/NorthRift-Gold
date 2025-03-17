@@ -699,12 +699,12 @@ export default function Products() {
                     <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Bunch</button>
                   )}
                 </div>
-                <button 
-                  onClick={() => addItem(product)}
-                  className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
-                >
-                  Add to Cart
-                </button>
+                  <button 
+                    onClick={() => addItem(product)}
+                    className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
+                  >
+                    Add to Cart
+                  </button>
               </div>
             </div>
           ))}
