@@ -190,6 +190,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-green-700">Testimonials</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 mb-4">"The freshest produce I've ever had! The delivery was quick and the quality is unmatched."</p>
+              <p className="text-green-700 font-bold">- Jane Doe</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 mb-4">"I love the variety of organic products available. It's my go-to place for healthy food."</p>
+              <p className="text-green-700 font-bold">- John Smith</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 mb-4">"Excellent customer service and the products are always fresh and delicious."</p>
+              <p className="text-green-700 font-bold">- Emily Johnson</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
