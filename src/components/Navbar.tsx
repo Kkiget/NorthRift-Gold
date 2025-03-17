@@ -7,7 +7,6 @@ import CartButton from './CartButton';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [cartCount] = useState(0);
 
     // Close mobile menu when clicking outside
     useEffect(() => {
