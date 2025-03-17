@@ -63,16 +63,13 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-16 mt-8 bg-gray-50">
+      <section className="py-8 mt-8 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <div className="space-y-4 md:col-span-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <div className="space-y-4">
               <h2 className="text-3xl font-bold text-green-700">At Organic</h2>
               <p className="text-lg text-gray-600">
-                We are passionate about growing fresh, chemical-free produce. Nestled in the heart of nature, our farm uses sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
-              </p>
-              <p className="text-sm text-gray-500">
-                We are dedicated to providing fresh, chemical-free produce through sustainable farming. Nestled in nature, our farm prioritizes protecting the environment while delivering healthy, high-quality food to your table.
+                We are passionate about growing fresh, chemical-free produce using sustainable farming practices.
               </p>
               <Link 
                 href="/about"
@@ -187,27 +184,6 @@ export default function Home() {
                 Subscribe
               </button>
             </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-green-700">Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 mb-4">"The freshest produce I've ever had! The delivery was quick and the quality is unmatched."</p>
-              <p className="text-green-700 font-bold">- Jane Doe</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 mb-4">"I love the variety of organic products available. It's my go-to place for healthy food."</p>
-              <p className="text-green-700 font-bold">- John Smith</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 mb-4">"Excellent customer service and the products are always fresh and delicious."</p>
-              <p className="text-green-700 font-bold">- Emily Johnson</p>
-            </div>
           </div>
         </div>
       </section>
