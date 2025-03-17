@@ -557,158 +557,209 @@ export default function Products() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-8">Our Products</h1>
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Our Products</h1>
+          <p className="text-lg text-gray-600">Discover our fresh, organic, and sustainably sourced products</p>
+        </div>
         
         {/* Search and Filters */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-full w-full md:w-64"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-          </div>
-          
-          <div className="flex gap-2 flex-wrap justify-center">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full capitalize ${
-                  selectedCategory === category
-                    ? 'bg-green-600 text-white'
-                    : 'bg-white border border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+        <div className="max-w-5xl mx-auto mb-12">
+          <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="relative w-full md:w-96">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <svg
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+              
+              <div className="flex gap-3 flex-wrap justify-center">
+                {categories.map(category => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-3 rounded-xl capitalize transition-all duration-200 ${
+                      selectedCategory === category
+                        ? 'bg-green-600 text-white shadow-lg transform scale-105'
+                        : 'bg-white border border-gray-200 text-gray-600 hover:border-green-500 hover:text-green-600'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredProducts.map(product => (
-            <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="relative h-48">
+            <div 
+              key={product.id} 
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              <div className="relative h-64">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-black">{product.name}</h3>
-                <p className="text-gray-600 text-sm mb-2">{product.description}</p>
-                <div className="flex justify-between items-center mb-2">
-                  {['Goat Meat', 'Sheep Mutton'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">Kg</button>
-                  )}
-                  <span className="text-green-600 font-bold">Ksh{getPrice(product).toLocaleString()}</span>
+                <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100">
+                  <div className="flex items-center justify-center h-full">
+                    <button 
+                      onClick={() => addItem(product)}
+                      className="bg-white text-green-600 px-6 py-3 rounded-xl font-semibold transform hover:scale-105 transition-all duration-200"
+                    >
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
-                <div className="flex gap-2 mb-2">
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">{product.name}</h3>
+                <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {['Goat Meat', 'Sheep Mutton'].includes(product.name) && (
+                    <button 
+                      onClick={() => handleQuantityChange(product.id, '1 kg')} 
+                      className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                    >
+                      Kg
+                    </button>
+                  )}
                   {['Beef Tallow', 'Ghee', 'Honey'].includes(product.name) && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '800 g')} className="px-2 py-1 border rounded">800 g</button>
+                      <button 
+                        onClick={() => handleQuantityChange(product.id, '500 g')} 
+                        className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                      >
+                        500 g
+                      </button>
+                      <button 
+                        onClick={() => handleQuantityChange(product.id, '800 g')} 
+                        className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                      >
+                        800 g
+                      </button>
                     </>
                   )}
                   {product.name === 'Kienyeji Eggs' && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, 'Full')} className="px-2 py-1 border rounded">Full</button>
-                      <button onClick={() => handleQuantityChange(product.id, 'Half')} className="px-2 py-1 border rounded">Half</button>
+                      <button onClick={() => handleQuantityChange(product.id, 'Full')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Full</button>
+                      <button onClick={() => handleQuantityChange(product.id, 'Half')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Half</button>
                     </>
                   )}
-                  {product.name === 'Apples' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                  {['Apples', 'Strawberries'].includes(product.name) && (
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
-                  {['Strawberries', 'Gooseberries'].includes(product.name) && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, '250 g')} className="px-2 py-1 border rounded">250 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
-                    </>
+                  {['Gooseberries', 'Ripe Bananas', 'Matoke Bananas', 'Sweet Bananas'].includes(product.name) && (
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {['Spinach', 'Kales', 'Kunde', 'Managu', 'Saga', 'Terere', 'Mrenda', 'Nderema', 'Mitoo', 'Pumpkin Leaves'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Bunch</button>
+                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
                   )}
                   {product.name === 'Cauliflower' && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 g</button>
+                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                     </>
                   )}
                   {product.name === 'Broccoli' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {product.name === 'Leeks' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {product.name === 'Celery' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {product.name === 'Cucumbers' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {['Cabbage', 'Chinese Cabbage', 'Red Cabbage'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {product.name === 'Egg Plant' && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 g</button>
+                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                     </>
                   )}
                   {product.name === 'Green Peas' && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-2 py-1 border rounded">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 g</button>
+                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                     </>
                   )}
                   {['Beans', 'Dry Maize', 'Wheat', 'Sorghum', 'Finger Millet', 'Cassava', 'Ground Nuts'].includes(product.name) && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">Kg</button>
-                      <button onClick={() => handleQuantityChange(product.id, '5 kg')} className="px-2 py-1 border rounded">5 kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Kg</button>
+                      <button onClick={() => handleQuantityChange(product.id, '5 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">5 kg</button>
                     </>
                   )}
                   {['Goat Milk', 'Sour Milk'].includes(product.name) && (
                     <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 ml')} className="px-2 py-1 border rounded">500 ml</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 litre')} className="px-2 py-1 border rounded">1 litre</button>
+                      <button onClick={() => handleQuantityChange(product.id, '500 ml')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 ml</button>
+                      <button onClick={() => handleQuantityChange(product.id, '1 litre')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 litre</button>
                     </>
                   )}
                   {['Chicken', 'Tilapia'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'Unit')} className="px-2 py-1 border rounded">Unit</button>
+                    <button onClick={() => handleQuantityChange(product.id, 'Unit')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Unit</button>
                   )}
-                  {['Matoke Bananas', 'Avocado', 'Ripe Bananas', 'Sweet Bananas'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                  {['Avocado', 'Ripe Bananas', 'Sweet Bananas'].includes(product.name) && (
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {['Cucumber', 'Potatoes', 'Sweet Potatoes', 'Arrowroots', 'Red Onions', 'White Onions', 'Capcicum', 'Chilly', 'Tomatoes', 'Carrots', 'Pumpkins'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-2 py-1 border rounded">1 kg</button>
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {product.name === 'Spring Onions' && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Bunch</button>
+                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
                   )}
                   {['Basil', 'Mint', 'Persley', 'Rosemary', 'Thyme', 'Dhania'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-2 py-1 border rounded">Bunch</button>
+                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
                   )}
                 </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-green-600">KSh{getPrice(product).toLocaleString()}</span>
                   <button 
                     onClick={() => addItem(product)}
-                    className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors"
+                    className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-200"
                   >
                     Add to Cart
                   </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
+        
+        {/* No Results Message */}
+        {filteredProducts.length === 0 && (
+          <div className="text-center py-12">
+            <h3 className="text-2xl font-semibold text-gray-600 mb-4">No products found</h3>
+            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+          </div>
+        )}
       </div>
     </div>
   );
