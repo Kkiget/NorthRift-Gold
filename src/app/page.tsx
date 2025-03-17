@@ -29,34 +29,13 @@ export default function Home() {
       price: 6.99,
       image: "/images/products/apples.jpg",
       description: "Sweet and juicy organic apples"
-    },
-    {
-      id: 6,
-      name: "Honey",
-      price: 1000,
-      image: "/images/products/honey.jpg",
-      description: "Pure, natural honey"
-    },
-    {
-      id: 13,
-      name: "Beef Tallow",
-      price: 700,
-      image: "/images/products/beef tallow.jpg",
-      description: "High-quality beef tallow"
-    },
-    {
-      id: 15,
-      name: "Chicken",
-      price: 1500,
-      image: "/images/products/chicken.jpg",
-      description: "Free-range chicken"
     }
   ];
 
   return (
     <main className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="relative h-screen flex flex-col justify-center items-center mt-8 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero/farmer.jpg)', animation: 'fade 60s infinite', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+      <section className="relative h-screen flex flex-col justify-center items-center mt-8 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero/farmer.jpg)', animation: 'fade 10s infinite', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
         <style jsx>{`
           @keyframes fade {
             0% { background-image: url(/images/hero/farmer.jpg); }
@@ -86,21 +65,39 @@ export default function Home() {
       {/* About Us Section */}
       <section className="py-16 mt-8 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-green-700 mb-4">Discover Our Journey</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                At Organic, we are more than just a farm; we are a community dedicated to nurturing the earth and providing you with the freshest, chemical-free produce. Nestled in the heart of nature, our farm employs sustainable practices that protect the environment and ensure the highest quality food reaches your table. Every seed we plant is a step toward a greener, healthier future.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="space-y-4 md:col-span-2">
+              <h2 className="text-3xl font-bold text-green-700">At Organic</h2>
+              <p className="text-lg text-gray-600">
+                We are passionate about growing fresh, chemical-free produce. Nestled in the heart of nature, our farm uses sustainable farming practices to protect the environment and deliver the healthiest food to your table. Every seed we plant is a step toward a greener, healthier future.
               </p>
-              <p className="text-md text-gray-600 leading-relaxed">
-                Our commitment to sustainability is unwavering. We believe in the power of nature to heal and nourish, and we strive to make a positive impact on the planet with every harvest. Join us on our journey to create a better world, one plant at a time.
+              <p className="text-sm text-gray-500">
+                We are dedicated to providing fresh, chemical-free produce through sustainable farming. Nestled in nature, our farm prioritizes protecting the environment while delivering healthy, high-quality food to your table.
               </p>
               <Link 
                 href="/about"
-                className="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors inline-block"
+                className="bg-transparent border border-green-600 text-green-600 px-6 py-2 rounded-full hover:bg-green-600 hover:text-white transition-colors inline-block"
               >
-                Learn More About Us
+                Learn More
               </Link>
+            </div>
+            <div className="grid grid-rows-2 gap-2">
+              <Image
+                src="/images/about/about1.jpg"
+                alt="Beekeeper with honey"
+                width={300}
+                height={200}
+                className="object-cover rounded-lg"
+                loading="lazy"
+              />
+              <Image
+                src="/images/about/about2.jpg"
+                alt="Green leaves"
+                width={300}
+                height={200}
+                className="object-cover rounded-lg"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -166,27 +163,6 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Fair Prices</h3>
               <p className="text-gray-600">Competitive prices that support both farmers and customers.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-green-700">What Our Customers Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <p className="text-gray-700 mb-4">"The freshest produce I've ever had! The quality is unmatched and the delivery was prompt."</p>
-              <h3 className="text-lg font-semibold text-green-700">- Wanjiku Mwangi</h3>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <p className="text-gray-700 mb-4">"I love knowing that my food is grown sustainably. It's a great feeling to support local farmers."</p>
-              <h3 className="text-lg font-semibold text-green-700">- Otieno Ochieng</h3>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <p className="text-gray-700 mb-4">"The organic honey is a game-changer. I can't get enough of it!"</p>
-              <h3 className="text-lg font-semibold text-green-700">- Achieng Auma</h3>
             </div>
           </div>
         </div>
