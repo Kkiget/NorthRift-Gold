@@ -43,28 +43,28 @@ const values = [
 
 const team = [
   {
-    name: 'Bethwel Kimaru',
-    role: 'Founder & CEO',
+    name: 'Philemon Kiprop',
+    role: 'Founder',
     image: '/images/team/team1.jpg',
-    bio: 'With over 15 years of experience in organic farming, Bethwel leads our mission to revolutionize sustainable agriculture in Kenya.'
+    bio: 'With over 15 years of experience in organic farming, Philemon leads our mission to revolutionize sustainable agriculture in Kenya.'
   },
   {
-    name: 'Sarah Wanjiku',
+    name: 'Jude Songok',
     role: 'Head of Operations',
     image: '/images/team/team2.jpg',
-    bio: 'Sarah oversees our daily operations and ensures the highest quality standards across all our farming practices.'
+    bio: 'Jude oversees our daily operations and ensures the highest quality standards across all our farming practices.'
   },
   {
-    name: 'James Maina',
+    name: 'Joy Korir',
     role: 'Agricultural Director',
     image: '/images/team/team3.jpg',
-    bio: 'James brings expertise in sustainable farming techniques and leads our agricultural innovation initiatives.'
+    bio: 'Joy brings expertise in sustainable farming techniques and leads our agricultural innovation initiatives.'
   },
   {
-    name: 'Mary Akinyi',
+    name: 'Bethwel Kimaru',
     role: 'Community Relations',
     image: '/images/team/team4.jpg',
-    bio: 'Mary manages our community outreach programs and farmer partnerships across the region.'
+    bio: 'Bethwel manages our community outreach programs and farmer partnerships across the region.'
   }
 ];
 
