@@ -68,6 +68,24 @@ const team = [
   }
 ];
 
+const impactMetrics = [
+  {
+    number: '50+',
+    label: 'Small-scale Farmers Supported',
+    description: "We've partnered with local farmers to promote sustainable practices."
+  },
+  {
+    number: '1,000+',
+    label: 'Households Served',
+    description: 'Delivering fresh, organic produce to families across the region.'
+  },
+  {
+    number: '30%',
+    label: 'Carbon Emissions Reduced',
+    description: 'Through our commitment to local sourcing and sustainable practices.'
+  }
+];
+
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -90,6 +108,71 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      {/* Vision Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Vision</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                We envision a world where farming is sustainable, communities thrive, and everyone has access to healthy, locally grown food.
+              </p>
+              <div className="relative h-[400px] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/blog5.jpg"
+                  alt="Sustainable Farming"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="space-y-8">
+              <div className="relative h-[300px] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/blog1.jpg"
+                  alt="Fresh Produce"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-[300px] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/blog6.jpg"
+                  alt="Team in Action"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Making a difference in our community and the environment
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {impactMetrics.map((metric, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+              >
+                <div className="text-4xl font-bold text-green-600 mb-4">{metric.number}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{metric.label}</h3>
+                <p className="text-gray-600">{metric.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -151,16 +234,18 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-green-50 rounded-2xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              To revolutionize organic farming in Kenya by implementing sustainable practices, 
-              supporting local communities, and delivering the highest quality produce while 
-              protecting our environment for future generations.
+          <div className="bg-green-600 rounded-2xl p-12 text-center text-white">
+            <h2 className="text-4xl font-bold mb-6">Join Our Mission</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Join us in our mission to create a healthier, more sustainable future. 
+              Explore our products, support local farmers, and taste the difference of fresh, organic produce.
             </p>
+            <button className="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors">
+              Explore Products
+            </button>
           </div>
         </div>
       </section>
