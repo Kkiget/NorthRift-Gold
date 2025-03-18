@@ -60,13 +60,15 @@ export default function Home() {
         <style jsx>{`
           @keyframes morph {
             0% { background-image: url('/images/hero/preview1.jpg'); }
-            25% { background-image: url('/images/hero/preview2.jpg'); }
-            50% { background-image: url('/images/hero/farmer.jpg'); }
-            75% { background-image: url('/images/hero/preview3.jpg'); }
-            100% { background-image: url('/images/hero/preview1.jpg'); }
+            16.67% { background-image: url('/images/hero/preview2.jpg'); }
+            33.33% { background-image: url('/images/hero/farmer.jpg'); }
+            50% { background-image: url('/images/hero/preview3.jpg'); }
+            66.67% { background-image: url('/images/newsletter/Produce2.jpeg'); }
+            83.33% { background-image: url('/images/blog/blog6.jpg'); }
+            100% { background-image: url('/images/blog/blog5.jpg'); }
           }
           .morphing-background {
-            animation: morph 20s infinite;
+            animation: morph 42s infinite;
             background-size: cover;
             background-position: center;
           }
