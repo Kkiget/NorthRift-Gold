@@ -522,7 +522,7 @@ export default function Products() {
   const getPrice = (product: Product) => {
     const quantity = quantities[product.id] || 0;
     const basePrice = product.price;
-    return quantity > 0 ? basePrice * quantity : 0;
+    return quantity > 0 ? basePrice * quantity : basePrice;
   };
 
   const updateQuantity = (productId: number, newQuantity: number) => {
