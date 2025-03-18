@@ -160,21 +160,21 @@ export default function Home() {
                 <i className="fas fa-leaf text-2xl text-green-600"></i>
               </div>
               <h3 className="text-xl font-semibold mb-2">100% Organic</h3>
-              <p className="text-gray-600">All our products are certified organic and grown without harmful pesticides.</p>
+              <p className="text-gray-800">All our products are certified organic and grown without harmful pesticides.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-truck text-2xl text-green-600"></i>
               </div>
               <h3 className="text-xl font-semibold mb-2">Local Delivery</h3>
-              <p className="text-gray-600">Fast and reliable delivery to your doorstep within 24 hours.</p>
+              <p className="text-gray-800">Fast and reliable delivery to your doorstep within 24 hours.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-hand-holding-usd text-2xl text-green-600"></i>
               </div>
               <h3 className="text-xl font-semibold mb-2">Fair Prices</h3>
-              <p className="text-gray-600">Competitive prices that support both farmers and customers.</p>
+              <p className="text-gray-800">Competitive prices that support both farmers and customers.</p>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4 text-green-700">Stay Updated</h2>
-            <p className="text-gray-600 mb-8">Subscribe to our newsletter for the latest products and special offers.</p>
+            <p className="text-gray-800 mb-8">Subscribe to our newsletter for the latest products and special offers.</p>
             <form className="flex gap-4">
               <input
                 type="email"
