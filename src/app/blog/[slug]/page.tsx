@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Blog post data
 const blogPosts = [
@@ -11,6 +12,7 @@ const blogPosts = [
     category: 'Farming',
     author: 'Bethwel Kimaru',
     date: '3/13/2024',
+    image: '/images/blog/blog4.jpg',
     content: `
       The agricultural world is undergoing a **revolution**, and organic farming is leading the charge. Gone are the days when organic farming was seen as a niche practice. Today, it's a **game-changer**, combining cutting-edge technology with nature's wisdom to create a sustainable and productive future.
 
@@ -33,6 +35,7 @@ const blogPosts = [
     category: 'Health',
     author: 'Bethwel Kimaru',
     date: '3/12/2024',
+    image: '/images/blog/blog2.jpg',
     content: `
       What if we told you that the secret to better health and a healthier planet is right in your backyard? **Local produce** is more than just a trend—it's a **lifestyle choice** that benefits you, your community, and the environment.
 
@@ -58,6 +61,7 @@ const blogPosts = [
     category: 'Sustainability',
     author: 'Bethwel Kimaru',
     date: '3/11/2024',
+    image: '/images/blog/blog3.jpg',
     content: `
       The clock is ticking, and the need for **sustainable farming** has never been more urgent. As climate change and environmental degradation threaten our future, farmers are stepping up with **eco-friendly practices** that protect the planet while ensuring food security.
 
@@ -104,6 +108,14 @@ export default function BlogPost() {
         </Link>
         
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="relative h-96">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+            />
+          </div>
           <div className="p-8">
             <div className="mb-6">
               <span className="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">

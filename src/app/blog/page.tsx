@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Blog post data (same as in [slug]/page.tsx)
 const blogPosts = [
@@ -10,7 +11,8 @@ const blogPosts = [
     category: 'Farming',
     author: 'Bethwel Kimaru',
     date: '3/13/2024',
-    excerpt: 'The agricultural world is undergoing a revolution, and organic farming is leading the charge. Gone are the days when organic farming was seen as a niche practice.'
+    excerpt: 'The agricultural world is undergoing a revolution, and organic farming is leading the charge. Gone are the days when organic farming was seen as a niche practice.',
+    image: '/images/blog/blog4.jpg'
   },
   {
     slug: 'local-produce-superfood',
@@ -18,7 +20,8 @@ const blogPosts = [
     category: 'Health',
     author: 'Bethwel Kimaru',
     date: '3/12/2024',
-    excerpt: 'What if we told you that the secret to better health and a healthier planet is right in your backyard? Local produce is more than just a trend—it\'s a lifestyle choice.'
+    excerpt: 'What if we told you that the secret to better health and a healthier planet is right in your backyard? Local produce is more than just a trend—it\'s a lifestyle choice.',
+    image: '/images/blog/blog2.jpg'
   },
   {
     slug: 'sustainable-farming',
@@ -26,7 +29,8 @@ const blogPosts = [
     category: 'Sustainability',
     author: 'Bethwel Kimaru',
     date: '3/11/2024',
-    excerpt: 'The clock is ticking, and the need for sustainable farming has never been more urgent. As climate change and environmental degradation threaten our future.'
+    excerpt: 'The clock is ticking, and the need for sustainable farming has never been more urgent. As climate change and environmental degradation threaten our future.',
+    image: '/images/blog/blog3.jpg'
   }
 ];
 
@@ -47,6 +51,19 @@ export default function Blog() {
               className="group"
             >
               <article className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <div className="relative h-48">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                    <div className="flex items-center justify-center h-full">
+                      <span className="text-white text-lg font-semibold">Read More</span>
+                    </div>
+                  </div>
+                </div>
                 <div className="p-6">
                   <div className="mb-4">
                     <span className="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">
