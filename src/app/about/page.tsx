@@ -74,8 +74,8 @@ export default function About() {
       {/* Hero Section */}
       <div className="relative h-[500px]">
         <Image
-          src="/images/about/hero.jpg"
-          alt="Organic Farming"
+          src="/images/features/landscape.jpg"
+          alt="Organic Farming Landscape"
           fill
           className="object-cover"
           priority
