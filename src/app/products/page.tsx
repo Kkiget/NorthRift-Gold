@@ -520,15 +520,15 @@ export default function Products() {
   });
 
   const getPrice = (product: Product) => {
-    const quantity = quantities[product.id] || 0;
+    const quantity = quantities[product.id] || 1;
     const basePrice = product.price;
-    return quantity > 0 ? basePrice * quantity : basePrice;
+    return basePrice * quantity;
   };
 
   const updateQuantity = (productId: number, newQuantity: number) => {
     setQuantities(prev => ({
       ...prev,
-      [productId]: newQuantity
+      [productId]: Math.max(1, newQuantity)
     }));
   };
 
@@ -612,14 +612,14 @@ export default function Products() {
                   <span className="text-lg font-semibold text-green-700">KSh {getPrice(product).toLocaleString()}</span>
                   <div className="flex items-center space-x-2">
                     <button
-                      onClick={() => updateQuantity(product.id, Math.max(0, (quantities[product.id] || 0) - 1))}
+                      onClick={() => updateQuantity(product.id, Math.max(1, (quantities[product.id] || 1) - 1))}
                       className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700 hover:bg-green-200 transition-colors duration-200"
                     >
                       -
                     </button>
-                    <span className="w-8 text-center">{quantities[product.id] || 0}</span>
+                    <span className="w-8 text-center">{quantities[product.id] || 1}</span>
                     <button
-                      onClick={() => updateQuantity(product.id, (quantities[product.id] || 0) + 1)}
+                      onClick={() => updateQuantity(product.id, (quantities[product.id] || 1) + 1)}
                       className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700 hover:bg-green-200 transition-colors duration-200"
                     >
                       +
