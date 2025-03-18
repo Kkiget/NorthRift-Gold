@@ -567,14 +567,14 @@ export default function Products() {
                 </svg>
               </div>
               
-              <div className="flex gap-3 flex-wrap justify-center">
+              <div className="flex gap-2 flex-wrap justify-center">
                 {categories.map(category => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-3 rounded-xl capitalize transition-all duration-200 ${
+                    className={`px-4 py-2 rounded-lg text-sm capitalize transition-all duration-200 ${
                       selectedCategory === category
-                        ? 'bg-green-600 text-white shadow-lg transform scale-105'
+                        ? 'bg-green-600 text-white shadow-md transform scale-105'
                         : 'bg-white border border-gray-200 text-gray-600 hover:border-green-500 hover:text-green-600'
                     }`}
                   >
