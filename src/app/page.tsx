@@ -69,7 +69,7 @@ export default function Home() {
             100% { background-image: url('/images/hero/preview1.jpg'); }
           }
           .morphing-background {
-            animation: morph 42s infinite;
+            animation: morph 42s infinite linear;
             background-size: cover;
             background-position: center;
           }
