@@ -17,7 +17,8 @@ export default function Products() {
   const { addItem } = useCart();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedQuantity, setSelectedQuantity] = useState<{ [key: number]: string }>({});
+  const [quantities, setQuantities] = useState<{ [key: number]: number }>({});
+  const [units, setUnits] = useState<{ [key: number]: string }>({});
 
   // Sample products data with actual images
   const products: Product[] = [
@@ -520,40 +521,20 @@ export default function Products() {
   });
 
   const handleQuantityChange = (productId: number, quantity: string) => {
-    setSelectedQuantity((prev: { [key: number]: string }) => ({ ...prev, [productId]: quantity }));
+    setQuantities((prev: { [key: number]: string }) => ({ ...prev, [productId]: quantity }));
   };
 
   const getPrice = (product: Product) => {
-    const quantity = selectedQuantity[product.id] || 'per item';
+    const quantity = quantities[product.id] || 1;
     const basePrice = product.price;
-    switch (quantity) {
-      case '500 g':
-        return basePrice / 2;
-      case '250 g':
-        return basePrice / 4;
-      case '200 g':
-        return basePrice / 5;
-      case 'per bunch':
-        return basePrice;
-      case 'per item':
-        return basePrice;
-      case 'per tray':
-        return basePrice * 30; // Assuming 30 eggs per tray
-      case '1/2 tray':
-        return basePrice * 15; // Assuming 15 eggs per half tray
-      case '1 kg':
-        return basePrice;
-      case '1 litre':
-        return basePrice;
-      case '800 g':
-        return basePrice;
-      case 'Full':
-        return basePrice;
-      case 'Half':
-        return basePrice / 2;
-      default:
-        return basePrice;
-    }
+    return basePrice * quantity;
+  };
+
+  const updateQuantity = (productId: number, newQuantity: number) => {
+    setQuantities(prev => ({
+      ...prev,
+      [productId]: newQuantity
+    }));
   };
 
   return (
@@ -640,120 +621,34 @@ export default function Products() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">{product.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{product.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {['Goat Meat', 'Sheep Mutton'].includes(product.name) && (
-                    <button 
-                      onClick={() => handleQuantityChange(product.id, '1 kg')} 
-                      className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-lg font-semibold text-green-700">KSh {getPrice(product).toLocaleString()}</span>
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => updateQuantity(product.id, Math.max(0, (quantities[product.id] || 0) - 1))}
+                      className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700 hover:bg-green-200 transition-colors duration-200"
                     >
-                      Kg
+                      -
                     </button>
-                  )}
-                  {['Beef Tallow', 'Ghee', 'Honey'].includes(product.name) && (
-                    <>
-                      <button 
-                        onClick={() => handleQuantityChange(product.id, '500 g')} 
-                        className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
-                      >
-                        500 g
-                      </button>
-                      <button 
-                        onClick={() => handleQuantityChange(product.id, '800 g')} 
-                        className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
-                      >
-                        800 g
-                      </button>
-                    </>
-                  )}
-                  {product.name === 'Kienyeji Eggs' && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, 'Full')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Full</button>
-                      <button onClick={() => handleQuantityChange(product.id, 'Half')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Half</button>
-                    </>
-                  )}
-                  {['Apples', 'Strawberries'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {['Gooseberries', 'Ripe Bananas', 'Matoke Bananas', 'Sweet Bananas'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {['Spinach', 'Kales', 'Kunde', 'Managu', 'Saga', 'Terere', 'Mrenda', 'Nderema', 'Mitoo', 'Pumpkin Leaves'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
-                  )}
-                  {product.name === 'Cauliflower' && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                    </>
-                  )}
-                  {product.name === 'Broccoli' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {product.name === 'Leeks' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {product.name === 'Celery' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {product.name === 'Cucumbers' && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {['Cabbage', 'Chinese Cabbage', 'Red Cabbage'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {product.name === 'Egg Plant' && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                    </>
-                  )}
-                  {product.name === 'Green Peas' && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 g')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 g</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                    </>
-                  )}
-                  {['Beans', 'Dry Maize', 'Wheat', 'Sorghum', 'Finger Millet', 'Cassava', 'Ground Nuts'].includes(product.name) && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Kg</button>
-                      <button onClick={() => handleQuantityChange(product.id, '5 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">5 kg</button>
-                    </>
-                  )}
-                  {['Goat Milk', 'Sour Milk'].includes(product.name) && (
-                    <>
-                      <button onClick={() => handleQuantityChange(product.id, '500 ml')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">500 ml</button>
-                      <button onClick={() => handleQuantityChange(product.id, '1 litre')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 litre</button>
-                    </>
-                  )}
-                  {['Chicken', 'Tilapia'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'Unit')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Unit</button>
-                  )}
-                  {['Avocado', 'Ripe Bananas', 'Sweet Bananas'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {['Cucumber', 'Potatoes', 'Sweet Potatoes', 'Arrowroots', 'Red Onions', 'White Onions', 'Capcicum', 'Chilly', 'Tomatoes', 'Carrots', 'Pumpkins'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
-                  )}
-                  {product.name === 'Spring Onions' && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
-                  )}
-                  {['Basil', 'Mint', 'Persley', 'Rosemary', 'Thyme', 'Dhania'].includes(product.name) && (
-                    <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
-                  )}
+                    <span className="w-8 text-center">{quantities[product.id] || 0}</span>
+                    <button
+                      onClick={() => updateQuantity(product.id, (quantities[product.id] || 0) + 1)}
+                      className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-green-700 hover:bg-green-200 transition-colors duration-200"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-green-600">KSh{getPrice(product).toLocaleString()}</span>
-                  <button 
-                    onClick={() => addItem(product)}
-                    className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                    </svg>
-                    Add to Cart
-                  </button>
-                </div>
+                <button
+                  onClick={() => addItem(product)}
+                  className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                  </svg>
+                  Add to Cart
+                </button>
+                <p className="text-gray-600 text-sm mt-2">{product.description}</p>
               </div>
             </div>
           ))}
