@@ -737,7 +737,7 @@ export default function Products() {
                 </div>
                 <div className="flex flex-col gap-4">
                   <span className="text-2xl font-bold text-green-600">KSh{getPrice(product).toLocaleString()}</span>
-                  <button
+                  <button 
                     onClick={() => addItem(product)}
                     className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2"
                   >

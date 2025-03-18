@@ -45,25 +45,25 @@ const team = [
   {
     name: 'Philemon Kiprop',
     role: 'Founder',
-    image: '/images/about/kiprop.eps',
+    image: '/images/team/african-businessman-1.jpg',
     bio: 'With over 15 years of experience in organic farming, Philemon leads our mission to revolutionize sustainable agriculture in Kenya.'
   },
   {
     name: 'Jude Songok',
     role: 'Head of Operations',
-    image: '/images/about/jude.eps',
+    image: '/images/team/african-businessman-2.jpg',
     bio: 'Jude oversees our daily operations and ensures the highest quality standards across all our farming practices.'
   },
   {
     name: 'Joy Korir',
     role: 'Agricultural Director',
-    image: '/images/about/korir.eps',
+    image: '/images/team/african-businesswoman-1.jpg',
     bio: 'Joy brings expertise in sustainable farming techniques and leads our agricultural innovation initiatives.'
   },
   {
     name: 'Bethwel Kimaru',
     role: 'Community Relations',
-    image: '/images/about/kimaru.eps',
+    image: '/images/team/african-businessman-3.jpg',
     bio: 'Bethwel manages our community outreach programs and farmer partnerships across the region.'
   }
 ];
