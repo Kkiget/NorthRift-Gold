@@ -159,21 +159,21 @@ export default function Home() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-leaf text-2xl text-green-600"></i>
               </div>
-              <h3 className="text-xl font-semibold mb-2">100% Organic</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">100% Organic</h3>
               <p className="text-gray-800">All our products are certified organic and grown without harmful pesticides.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-truck text-2xl text-green-600"></i>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Local Delivery</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">Local Delivery</h3>
               <p className="text-gray-800">Fast and reliable delivery to your doorstep within 24 hours.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-hand-holding-usd text-2xl text-green-600"></i>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fair Prices</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">Fair Prices</h3>
               <p className="text-gray-800">Competitive prices that support both farmers and customers.</p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-700"
               />
               <button
                 type="submit"
