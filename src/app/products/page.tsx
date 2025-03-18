@@ -18,7 +18,6 @@ export default function Products() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [quantities, setQuantities] = useState<{ [key: number]: number }>({});
-  const [units, setUnits] = useState<{ [key: number]: string }>({});
 
   // Sample products data with actual images
   const products: Product[] = [
@@ -519,13 +518,6 @@ export default function Products() {
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
-  const handleQuantityChange = (productId: number, quantity: number) => {
-    setQuantities(prev => ({
-      ...prev,
-      [productId]: quantity
-    }));
-  };
 
   const getPrice = (product: Product) => {
     const quantity = quantities[product.id] || 1;
