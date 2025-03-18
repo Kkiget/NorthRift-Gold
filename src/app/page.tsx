@@ -9,19 +9,19 @@ const testimonials = [
     name: 'Sarah Wanjiku',
     role: 'Local Farmer',
     content: 'NorthRift Gold has transformed our farming practices. Their support and guidance have helped us achieve better yields while maintaining sustainable methods.',
-    image: '/images/testimonials/testimonial1.jpg'
+    image: '/images/hero/sarah.jpg'
   },
   {
     name: 'Michael Omondi',
     role: 'Restaurant Owner',
     content: 'The quality of produce from NorthRift Gold is exceptional. Their commitment to organic farming and local sourcing aligns perfectly with our values.',
-    image: '/images/testimonials/testimonial2.jpg'
+    image: '/images/hero/michael.jpg'
   },
   {
     name: 'Grace Achieng',
     role: 'Community Member',
     content: 'As a regular customer, I appreciate their dedication to supporting local farmers while providing us with fresh, organic produce.',
-    image: '/images/testimonials/testimonial3.jpg'
+    image: '/images/hero/grace.jpg'
   }
 ];
 
