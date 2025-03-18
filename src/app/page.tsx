@@ -66,6 +66,7 @@ export default function Home() {
             66.67% { background-image: url('/images/newsletter/Produce2.jpeg'); }
             83.33% { background-image: url('/images/blog/blog6.jpg'); }
             100% { background-image: url('/images/blog/blog5.jpg'); }
+            0% { background-image: url('/images/hero/preview1.jpg'); }
           }
           .morphing-background {
             animation: morph 42s infinite;
