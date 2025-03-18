@@ -10,21 +10,21 @@ const testimonials = [
     role: 'Local Restaurant Owner',
     image: '/images/testimonials/testimonial1.jpg',
     rating: 5,
-    quote: `The quality of produce from NorthRift Gold is exceptional. Their commitment to organic farming and local sourcing makes them our preferred supplier.`
+    quote: `"The quality of produce from NorthRift Gold is exceptional. Their commitment to organic farming and local sourcing makes them our preferred supplier."`
   },
   {
     name: 'James Maina',
     role: 'Home Chef',
     image: '/images/testimonials/testimonial2.jpg',
     rating: 5,
-    quote: `I love how fresh and flavorful their vegetables are. Knowing that I'm supporting local farmers makes it even better.`
+    quote: `"I love how fresh and flavorful their vegetables are. Knowing that I'm supporting local farmers makes it even better."`
   },
   {
     name: 'Mary Akinyi',
     role: 'Health Coach',
     image: '/images/testimonials/testimonial3.jpg',
     rating: 5,
-    quote: `As a health coach, I recommend NorthRift Gold to all my clients. Their organic produce is consistently high quality.`
+    quote: `"As a health coach, I recommend NorthRift Gold to all my clients. Their organic produce is consistently high quality."`
   }
 ];
 
@@ -166,7 +166,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-600 mb-6 italic">{testimonial.quote}</p>
                 <div className="flex items-center">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image
