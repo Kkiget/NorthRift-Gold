@@ -45,25 +45,25 @@ const team = [
   {
     name: 'Philemon Kiprop',
     role: 'Founder',
-    image: '/images/team/team1.jpg',
+    image: '/images/about/kiprop.eps',
     bio: 'With over 15 years of experience in organic farming, Philemon leads our mission to revolutionize sustainable agriculture in Kenya.'
   },
   {
     name: 'Jude Songok',
     role: 'Head of Operations',
-    image: '/images/team/team2.jpg',
+    image: '/images/about/jude.eps',
     bio: 'Jude oversees our daily operations and ensures the highest quality standards across all our farming practices.'
   },
   {
     name: 'Joy Korir',
     role: 'Agricultural Director',
-    image: '/images/team/team3.jpg',
+    image: '/images/about/korir.eps',
     bio: 'Joy brings expertise in sustainable farming techniques and leads our agricultural innovation initiatives.'
   },
   {
     name: 'Bethwel Kimaru',
     role: 'Community Relations',
-    image: '/images/team/team4.jpg',
+    image: '/images/about/kimaru.eps',
     bio: 'Bethwel manages our community outreach programs and farmer partnerships across the region.'
   }
 ];
@@ -107,7 +107,7 @@ export default function About() {
             </p>
           </div>
         </div>
-      </div>
+              </div>
 
       {/* Vision Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -245,7 +245,7 @@ export default function About() {
             </p>
             <button className="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors">
               Explore Products
-            </button>
+          </button>
           </div>
         </div>
       </section>
