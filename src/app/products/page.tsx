@@ -520,8 +520,11 @@ export default function Products() {
     return matchesSearch && matchesCategory;
   });
 
-  const handleQuantityChange = (productId: number, quantity: string) => {
-    setQuantities((prev: { [key: number]: string }) => ({ ...prev, [productId]: quantity }));
+  const handleQuantityChange = (productId: number, quantity: number) => {
+    setQuantities(prev => ({
+      ...prev,
+      [productId]: quantity
+    }));
   };
 
   const getPrice = (product: Product) => {
