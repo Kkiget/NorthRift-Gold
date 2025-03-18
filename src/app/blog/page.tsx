@@ -1,86 +1,77 @@
 'use client';
 
-import BlogCard from '@/components/BlogCard';
+import Link from 'next/link';
 
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  image: string;
-  date: string;
-  author: string;
-  category: string;
-}
+// Blog post data (same as in [slug]/page.tsx)
+const blogPosts = [
+  {
+    slug: 'organic-farming-innovations',
+    title: 'Organic Farming Innovations: The Future of Agriculture is Here!',
+    category: 'Farming',
+    author: 'Bethwel Kimaru',
+    date: '3/13/2024',
+    excerpt: 'The agricultural world is undergoing a revolution, and organic farming is leading the charge. Gone are the days when organic farming was seen as a niche practice.'
+  },
+  {
+    slug: 'local-produce-superfood',
+    title: 'Why Local Produce is the Ultimate Superfood for Your Health and the Planet',
+    category: 'Health',
+    author: 'Bethwel Kimaru',
+    date: '3/12/2024',
+    excerpt: 'What if we told you that the secret to better health and a healthier planet is right in your backyard? Local produce is more than just a trend—it\'s a lifestyle choice.'
+  },
+  {
+    slug: 'sustainable-farming',
+    title: 'Sustainable Farming: The Key to Saving Our Planet',
+    category: 'Sustainability',
+    author: 'Bethwel Kimaru',
+    date: '3/11/2024',
+    excerpt: 'The clock is ticking, and the need for sustainable farming has never been more urgent. As climate change and environmental degradation threaten our future.'
+  }
+];
 
 export default function Blog() {
-  // Sample blog posts data - you'll want to replace this with your actual data from an API or database
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "Organic Farming Innovations",
-      excerpt: "Discover the latest innovations in organic farming that are revolutionizing sustainable agriculture.",
-      image: "/images/blog/blog4.jpg",
-      date: "2024-03-13",
-      author: "John Doe",
-      category: "Farming"
-    },
-    {
-      id: 2,
-      title: "Benefits of Local Produce",
-      excerpt: "Learn why choosing local produce is better for your health and the environment.",
-      image: "/images/blog/blog2.jpg",
-      date: "2024-03-12",
-      author: "Jane Smith",
-      category: "Health"
-    },
-    {
-      id: 3,
-      title: "Sustainable Farming Practices",
-      excerpt: "Explore the sustainable farming practices that help preserve our environment.",
-      image: "/images/blog/blog3.jpg",
-      date: "2024-03-11",
-      author: "Mike Johnson",
-      category: "Sustainability"
-    }
-  ];
-
-  const featuredPost = blogPosts[0];
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Featured Article */}
-      <BlogCard {...featuredPost} featured={true} />
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
+          <p className="text-xl text-gray-600">Insights, updates, and stories from the world of organic farming</p>
+        </div>
 
-      {/* Blog Posts Grid */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-8">Latest Articles</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map(post => (
-            <BlogCard key={post.id} {...post} />
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <Link 
+              key={post.slug} 
+              href={`/blog/${post.slug}`}
+              className="group"
+            >
+              <article className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <div className="p-6">
+                  <div className="mb-4">
+                    <span className="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">
+                      {post.category}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-200">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span className="mr-4">By {post.author}</span>
+                    <span>{post.date}</span>
+                  </div>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="bg-green-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-          <p className="mb-8">Stay updated with our latest articles and farming tips</p>
-          <form className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
-            <button
-              type="submit"
-              className="bg-white text-green-600 px-6 py-2 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
