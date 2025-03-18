@@ -57,13 +57,21 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
-        <Image
-          src="/images/hero/hero1.jpg"
-          alt="Organic Farming"
-          fill
-          className="object-cover"
-          priority
-        />
+        <style jsx>{`
+          @keyframes morph {
+            0% { background-image: url('/images/hero/preview1.jpg'); }
+            25% { background-image: url('/images/hero/preview2.jpg'); }
+            50% { background-image: url('/images/hero/farmer.jpg'); }
+            75% { background-image: url('/images/hero/preview3.jpg'); }
+            100% { background-image: url('/images/hero/preview1.jpg'); }
+          }
+          .morphing-background {
+            animation: morph 120s infinite;
+            background-size: cover;
+            background-position: center;
+          }
+        `}</style>
+        <div className="absolute inset-0 morphing-background" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
