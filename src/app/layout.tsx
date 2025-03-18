@@ -6,6 +6,7 @@ import Image from 'next/image'
 import MobileNav from '@/components/MobileNav'
 import CartButton from '@/components/CartButton'
 import { CartProvider } from '@/context/CartContext'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -94,6 +95,7 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
+          <WhatsAppButton />
         </CartProvider>
       </body>
     </html>
