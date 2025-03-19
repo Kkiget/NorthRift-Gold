@@ -35,7 +35,7 @@ export default function Navbar() {
 
                     <ul className={`absolute md:relative top-full left-0 w-full md:w-auto
                         md:flex md:space-x-8 bg-white md:bg-transparent
-                        ${isMobileMenuOpen ? 'flex flex-col shadow-md' : 'hidden'}
+                        ${isMobileMenuOpen ? 'flex flex-col shadow-md bg-white' : 'hidden'}
                         md:flex items-center transition-all duration-300 ease-in-out`}
                     >
                         <li className="p-4 md:p-0">
