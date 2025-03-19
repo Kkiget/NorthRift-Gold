@@ -20,7 +20,7 @@ export default function Navbar() {
                             height={50}
                             className="w-auto h-auto"
                         />
-                        <div className="font-['Orbitron']">
+                        <div className="font-['Bank Gothic'] text-black">
                             <span className="text-xl font-bold">NorthRift</span>
                             <span className="text-xl font-bold text-yellow-600">Gold</span>
                         </div>
