@@ -81,6 +81,13 @@ export default function Navbar() {
                     </ul>
                 </div>
             </nav>
+            {isMobileMenuOpen && (
+                <style jsx>{`
+                    .whatsapp-button {
+                        display: none;
+                    }
+                `}</style>
+            )}
         </header>
     );
 }
