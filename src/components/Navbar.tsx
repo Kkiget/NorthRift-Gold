@@ -40,7 +40,7 @@ export default function Navbar() {
                     <ul className={`absolute md:relative top-full left-0 w-full md:w-auto
                         md:flex md:space-x-8 bg-white md:bg-transparent
                         ${isMobileMenuOpen ? 'flex flex-col shadow-md bg-white z-50' : 'hidden'}
-                        md:flex items-center transition-all duration-300 ease-in-out`}
+                        md:flex items-center transition-all duration-300 ease-in-out z-50`}
                     >
                         <li className="p-6 md:p-0">
                             <Link href="/#about" className="hover:text-green-600 transition-colors">
