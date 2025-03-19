@@ -734,6 +734,12 @@ export default function Products() {
                   {['Basil', 'Mint', 'Persley', 'Rosemary', 'Thyme', 'Dhania'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, 'per bunch')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Bunch</button>
                   )}
+                  {['Ripe Bananas'].includes(product.name) && (
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
+                  )}
+                  {['Sweet Bananas'].includes(product.name) && (
+                    <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
+                  )}
                 </div>
                 <div className="flex flex-col gap-4">
                   <span className="text-2xl font-bold text-green-600">KSh{getPrice(product).toLocaleString()}</span>
