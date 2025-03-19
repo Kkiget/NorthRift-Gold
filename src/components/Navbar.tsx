@@ -33,17 +33,21 @@ export default function Navbar() {
                         {isMobileMenuOpen ? '✕' : '☰'}
                     </button>
 
+                    {isMobileMenuOpen && (
+                        <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={() => setIsMobileMenuOpen(false)}></div>
+                    )}
+
                     <ul className={`absolute md:relative top-full left-0 w-full md:w-auto
                         md:flex md:space-x-8 bg-white md:bg-transparent
-                        ${isMobileMenuOpen ? 'flex flex-col shadow-md bg-white' : 'hidden'}
+                        ${isMobileMenuOpen ? 'flex flex-col shadow-md bg-white z-50' : 'hidden'}
                         md:flex items-center transition-all duration-300 ease-in-out`}
                     >
-                        <li className="p-4 md:p-0">
+                        <li className="p-6 md:p-0">
                             <Link href="/#about" className="hover:text-green-600 transition-colors">
                                 About us
                             </Link>
                         </li>
-                        <li className="p-4 md:p-0">
+                        <li className="p-6 md:p-0">
                             <Link href="/products" className="hover:text-green-600 transition-colors">
                                 Products
                             </Link>
