@@ -21,8 +21,8 @@ export default function Navbar() {
                             className="w-auto h-auto"
                         />
                         <div className="font-['Bank Gothic'] text-black">
-                            <span className="text-xl font-bold">NorthRift</span>
-                            <span className="text-xl font-bold text-yellow-600">Gold</span>
+                            <span className="text-2xl font-bold text-shadow-md">NorthRift</span>
+                            <span className="text-2xl font-bold text-yellow-700 text-shadow-md">Gold</span>
                         </div>
                     </Link>
 
