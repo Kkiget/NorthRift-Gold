@@ -668,7 +668,7 @@ export default function Products() {
                   {['Apples', 'Strawberries'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
-                  {['Gooseberries', 'Ripe Bananas', 'Matoke Bananas', 'Sweet Bananas'].includes(product.name) && (
+                  {['Gooseberries', 'Matoke Bananas'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {['Spinach', 'Kales', 'Kunde', 'Managu', 'Saga', 'Terere', 'Mrenda', 'Nderema', 'Mitoo', 'Pumpkin Leaves'].includes(product.name) && (
@@ -722,7 +722,7 @@ export default function Products() {
                   {['Chicken', 'Tilapia'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, 'Unit')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">Unit</button>
                   )}
-                  {['Avocado', 'Ripe Bananas', 'Sweet Bananas'].includes(product.name) && (
+                  {['Avocado'].includes(product.name) && (
                     <button onClick={() => handleQuantityChange(product.id, '1 kg')} className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">1 kg</button>
                   )}
                   {['Cucumber', 'Potatoes', 'Sweet Potatoes', 'Arrowroots', 'Red Onions', 'White Onions', 'Capcicum', 'Chilly', 'Tomatoes', 'Carrots', 'Pumpkins'].includes(product.name) && (
