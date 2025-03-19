@@ -244,8 +244,8 @@ export default function About() {
               Explore our products, support local farmers, and taste the difference of fresh, organic produce.
             </p>
             <button className="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors">
-              Explore Products
-          </button>
+              <a href="/products">Explore Products</a>
+            </button>
           </div>
         </div>
       </section>
