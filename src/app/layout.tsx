@@ -16,18 +16,19 @@ export const metadata: Metadata = {
   description: 'Your source for fresh, organic, and sustainable produce',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+interface Item {
+  name: string;
+  price: number;
+}
+
+interface Props {
+  selectedItems: Item[];
+}
+
+const PlaceOrderButton: React.FC<Props> = ({ selectedItems }) => {
   const formatMessage = () => {
     let message = 'Hello, I would like to place an order for the following items:\n\n'
     let total = 0
-
-    // Assuming selectedItems is available in the component's state or props
-    // Replace this with actual implementation to get selectedItems
-    const selectedItems = []
 
     selectedItems.forEach(item => {
       message += `- ${item.name}: KSh ${item.price}\n`
@@ -45,6 +46,21 @@ export default function RootLayout({
     window.open(whatsappUrl, '_blank')
   }
 
+  return (
+    <button 
+      onClick={handlePlaceOrder} 
+      className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+    >
+      Place Order
+    </button>
+  )
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <head>
@@ -138,12 +154,7 @@ export default function RootLayout({
             </div>
           </footer>
           <WhatsAppButton />
-          <button 
-            onClick={handlePlaceOrder} 
-            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            Place Order
-          </button>
+          <PlaceOrderButton selectedItems={[]} />
         </CartProvider>
       </body>
     </html>
