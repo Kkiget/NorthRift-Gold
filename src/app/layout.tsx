@@ -7,6 +7,7 @@ import MobileNav from '@/components/MobileNav'
 import CartButton from '@/components/CartButton'
 import { CartProvider } from '@/context/CartContext'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const formatMessage = () => {
+    let message = 'Hello, I would like to place an order for the following items:\n\n'
+    let total = 0
+
+    // Assuming selectedItems is available in the component's state or props
+    // Replace this with actual implementation to get selectedItems
+    const selectedItems = []
+
+    selectedItems.forEach(item => {
+      message += `- ${item.name}: KSh ${item.price}\n`
+      total += item.price
+    })
+
+    message += `\nTotal: KSh ${total}`
+    return encodeURIComponent(message)
+  }
+
+  const handlePlaceOrder = () => {
+    const phoneNumber = '254715491326' // Your WhatsApp number
+    const message = formatMessage()
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+    window.open(whatsappUrl, '_blank')
+  }
+
   return (
     <html lang="en">
       <head>
@@ -113,6 +138,12 @@ export default function RootLayout({
             </div>
           </footer>
           <WhatsAppButton />
+          <button 
+            onClick={handlePlaceOrder} 
+            className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+          >
+            Place Order
+          </button>
         </CartProvider>
       </body>
     </html>
