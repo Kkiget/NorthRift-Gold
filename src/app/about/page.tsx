@@ -51,19 +51,19 @@ const team = [
   {
     name: 'Jude Songok',
     role: 'Head of Operations',
-    image: '/images/team/african-businessman-2.jpg',
+    image: '/images/about/jude.png',
     bio: 'Jude oversees our daily operations and ensures the highest quality standards across all our farming practices.'
   },
   {
     name: 'Joy Korir',
     role: 'Agricultural Director',
-    image: '/images/team/african-businesswoman-1.jpg',
+    image: '/images/about/korir.png',
     bio: 'Joy brings expertise in sustainable farming techniques and leads our agricultural innovation initiatives.'
   },
   {
     name: 'Bethwel Kimaru',
     role: 'Community Relations',
-    image: '/images/team/african-businessman-3.jpg',
+    image: '/images/about/kimaru.png',
     bio: 'Bethwel manages our community outreach programs and farmer partnerships across the region.'
   }
 ];
@@ -85,6 +85,30 @@ const impactMetrics = [
     description: 'Through our commitment to local sourcing and sustainable practices.'
   }
 ];
+
+const TeamMembers = () => {
+    return (
+        <div className="team-members">
+            <h2>Meet Our Team</h2>
+            <div className="member">
+                <img src="/images/about/jude.png" alt="Jude" />
+                <p>Jude</p>
+            </div>
+            <div className="member">
+                <img src="/images/about/korir.png" alt="Korir" />
+                <p>Korir</p>
+            </div>
+            <div className="member">
+                <img src="/images/about/kiprop.png" alt="Kiprop" />
+                <p>Kiprop</p>
+            </div>
+            <div className="member">
+                <img src="/images/about/kimaru.png" alt="Kimaru" />
+                <p>Kimaru</p>
+            </div>
+        </div>
+    );
+};
 
 export default function About() {
   return (
