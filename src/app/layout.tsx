@@ -84,8 +84,8 @@ export default function RootLayout({
                 <div>
                   <h3 className="text-xl font-bold mb-4">Contact Info</h3>
                   <ul className="space-y-2 text-gray-300">
-                    <li><i className="fas fa-phone mr-2"></i> +254 123 456 789</li>
-                    <li><i className="fas fa-envelope mr-2"></i> info@northriftgold.com</li>
+                    <li><i className="fas fa-phone mr-2"></i> +254 715 491 326</li>
+                    <li><i className="fas fa-envelope mr-2"></i> northriftgold@gmail.com</li>
                     <li><i className="fas fa-map-marker-alt mr-2"></i> Eldoret, Kenya</li>
                   </ul>
                 </div>
@@ -99,7 +99,16 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
-                <p>&copy; {new Date().getFullYear()} NorthRift Gold. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} NorthRift Gold. All rights reserved. Designed & Developed by 
+                    <a 
+                        href="https://github.com/Kkiget" 
+                        className="text-green-500 hover:text-green-700" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        Kkiget
+                    </a>
+                </p>
               </div>
             </div>
           </footer>
