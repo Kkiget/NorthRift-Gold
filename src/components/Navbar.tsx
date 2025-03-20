@@ -88,6 +88,10 @@ export default function Navbar() {
                     .whatsapp-button {
                         display: none;
                     }
+
+                    .menu-open .whatsapp-button {
+                        display: none; /* Ensure it stays hidden */
+                    }
                 `}</style>
             )}
         </header>
