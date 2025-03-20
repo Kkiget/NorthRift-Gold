@@ -1,0 +1,217 @@
+[33mcommit 8743e690ef5fea88e36d7e13c6a1720efc7af1a3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Thu Mar 20 11:27:15 2025 +0300
+
+    Updated team members section with images and optimized image usage
+
+[33mcommit d076097a6902268d32e2deb450245c05dfc0d5aa[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Thu Mar 20 11:19:13 2025 +0300
+
+    Added new team member images and removed old EPS files
+
+[33mcommit 98a5a6784a8cab313936dc57a221673bc5d0306c[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Thu Mar 20 11:15:01 2025 +0300
+
+    Added new team member images to the about page
+
+[33mcommit d3f90aa779c817e7a08c12c1419646e1c6ae735c[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Thu Mar 20 10:57:20 2025 +0300
+
+    Ensure NorthRift Gold text is visible with explicit color styling
+
+[33mcommit 2749405e1c480618d51ce2a85ac96d2dcdb4a449[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Thu Mar 20 10:42:26 2025 +0300
+
+    Improve visibility of NorthRift Gold text with inline styles
+
+[33mcommit bc8fe0baefc31939ca8e75cdd52fc27c14db82f9[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 20:08:51 2025 +0300
+
+    Improve visibility of NorthRift Gold text on navbar
+
+[33mcommit f64482c612d0cc0a88def57b401fd659ce08ae2b[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 19:58:02 2025 +0300
+
+    Update navbar to style NorthRift and Gold with different colors
+
+[33mcommit ce07f21552398272969f2d5ebabf3c69d0f09baa[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 19:29:12 2025 +0300
+
+    Hide WhatsApp button when navigation menu is open on mobile
+
+[33mcommit d05bbfe796bb7f85eca1de4a09beeec0c135537f[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 15:10:35 2025 +0300
+
+    Update font to Bank Gothic for NorthRift Gold name
+
+[33mcommit 7af379cf2aa3af5d9f2fcf0e6ba478cda20c9db2[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 14:11:40 2025 +0300
+
+    Commit all pending changes
+
+[33mcommit 3c854307a1e0886f93c66dd0a2fbcf10068ccb0c[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 13:12:41 2025 +0300
+
+    Improve mobile UX for navigation menu
+
+[33mcommit bf8c63f37902b812187482d096fadddf6e006c6f[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 13:07:52 2025 +0300
+
+    Update about page with Explore Products link
+
+[33mcommit 1f7fe116de66e0e6bf3ea1fd16407b1083a50def[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 12:48:01 2025 +0300
+
+    Add background color to mobile menu to prevent black screen issue
+
+[33mcommit a0a4801dd66c9e6739cb129d4acb978f8cd31bc1[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 12:23:47 2025 +0300
+
+    Ensure one '1kg' option for Ripe Bananas and Sweet Bananas
+
+[33mcommit 62149864cd73c0c9a6970579957f29e248b40349[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 12:09:51 2025 +0300
+
+    Remove extra '1kg' option for Ripe Bananas and Sweet Bananas
+
+[33mcommit d48724bd5d7ece7c1c23d3fbcbe1b05a50dd79be[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Wed Mar 19 11:40:45 2025 +0300
+
+    Improve text visibility on checkout page
+
+[33mcommit 153749c2806ca2e4e2fbd97ab42aa5b0f2768a57[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:50:42 2025 +0300
+
+    Randomize image order in morphing background effect
+
+[33mcommit 10817d4d1669fd8c9ba5d1e7fc8014a8083875ca[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:42:53 2025 +0300
+
+    Ensure immediate transition from 'farmer.jpg' to next image
+
+[33mcommit b6076beabb5c9b9449c21f0aaac5c857fed8bdb9[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:37:19 2025 +0300
+
+    Fix seamless transition in morphing background effect
+
+[33mcommit b1340721248dec4f788a78e8531c4155565a74d6[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:31:33 2025 +0300
+
+    Fix seamless transition in morphing background effect
+
+[33mcommit 7e1e6de0092e8f679772822a0afcdda18863e50d[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:24:02 2025 +0300
+
+    Ensure seamless transition in morphing background effect
+
+[33mcommit 1a52a38ecb58fd22273412fe03cd949c5f3e1cf3[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:17:59 2025 +0300
+
+    Enhance text visibility for key sections and placeholder text
+
+[33mcommit 48bdf3a09b37037828c98e2d24ee541bc4220f8e[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:12:26 2025 +0300
+
+    Improve text visibility in 'Why Choose Us' and 'Stay Updated' sections
+
+[33mcommit af5bafcf99a6a949a121a0979a46f24477ca3a92[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 18:05:53 2025 +0300
+
+    Adjust keyframes for smooth transition in morphing background effect
+
+[33mcommit a6e9085d9357030a0f15ffbe907e0ab60cd1c5b8[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:58:10 2025 +0300
+
+    Ensure smooth transition in morphing background effect
+
+[33mcommit eeb7663680e848f8fe75df167fdd315e5fd80387[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:44:14 2025 +0300
+
+    Update morphing background effect with new images and infinite loop
+
+[33mcommit ea808a2b423f21b3eba342a4fb118ee1677db48f[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:38:45 2025 +0300
+
+    Update testimonial images with specified files
+
+[33mcommit 0bad383eb1c8ab3756fd18d7f217155cdef98f3d[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:35:08 2025 +0300
+
+    Update morphing background effect to change every 5 seconds
+
+[33mcommit fcfb79973d8b56d7274cda995515ca3a7db4a734[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:29:55 2025 +0300
+
+    Save all changes to the project
+
+[33mcommit 70d40da69c7049a00c70cc4257e58e6ca714d055[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:27:05 2025 +0300
+
+    Add morphing background effect to home page
+
+[33mcommit 1e2c6ef5eb145efadee153ec6f0dde63a8096d52[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:19:11 2025 +0300
+
+    Update home page theme to match about page theme
+
+[33mcommit 322086b09cf55ced6689449eec85b2b890073b26[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 17:14:21 2025 +0300
+
+    Update home page theme to match about page theme
+
+[33mcommit 84a5c1fd840f364cebda513880ef25a315f0f48d[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 16:11:01 2025 +0300
+
+    Fix unescaped quotes in testimonials section
+
+[33mcommit 06fe61138197fe71845c30cf57347d0f349ec686[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 16:08:16 2025 +0300
+
+    Update home page with new headline, testimonials, and team images
+
+[33mcommit da2531d03d16ffa18bc44c7c76952ae40a016ce1[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 15:46:36 2025 +0300
+
+    Fix ESLint errors by properly handling quotes in testimonials
+
+[33mcommit 1f53425e6a205996b6ed57645834a2eb02324791[m
+Author: Kimaru Bethwel <143094784+Kkiget@users.noreply.github.com>
+Date:   Tue Mar 18 15:40:37 2025 +0300
+
+    Update home page with new headline, testimonials, and improved layout
+
+[33mcommit c66899b0ea5c1e943eb73a4a9
