@@ -24,6 +24,6 @@ body {
 
 /* Assuming this is the class for the Northrift text */
 .northrift-text {
-    color: black; /* Change from gold to black */
+    color: rgb(6, 72, 33); /* Change from gold to black */
     /* ... other styles ... */
 }
