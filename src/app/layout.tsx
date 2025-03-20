@@ -31,25 +31,33 @@ export default function RootLayout({
       <body className={inter.className}>
         <CartProvider>
           <header className="sticky top-0 bg-white shadow-md z-50">
-            <nav className="flex justify-between items-center px-8 py-4">
+            <nav className="flex justify-between items-center px-4 sm:px-8 py-4">
               <Link href="/" className="flex items-center">
                 <Image
                   src="/images/logo/Logo.png"
                   alt="Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2"
+                  width={50}
+                  height={50}
+                  className="mr-3"
+                  priority
                 />
-                <span className="text-xl font-bold">NorthRift Gold</span>
+                <span className="text-xl md:text-2xl font-bold text-green-700 hidden sm:block">
+                  NorthRift <span className="text-amber-600">Gold</span>
+                </span>
               </Link>
               <ul className="hidden md:flex items-center space-x-6">
-                <li><Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">Home</Link></li>
-                <li><Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors">About</Link></li>
-                <li><Link href="/products" className="text-gray-700 hover:text-green-600 transition-colors">Products</Link></li>
-                <li><Link href="/blog" className="text-gray-700 hover:text-green-600 transition-colors">Blog</Link></li>
+                <li><Link href="/" className="text-green-700 hover:text-amber-600 font-medium transition-colors">Home</Link></li>
+                <li><Link href="/about" className="text-green-700 hover:text-amber-600 font-medium transition-colors">About</Link></li>
+                <li><Link href="/products" className="text-green-700 hover:text-amber-600 font-medium transition-colors">Products</Link></li>
+                <li><Link href="/blog" className="text-green-700 hover:text-amber-600 font-medium transition-colors">Blog</Link></li>
                 <li><CartButton /></li>
               </ul>
-              <MobileNav />
+              <div className="flex items-center md:hidden">
+                <span className="text-xl font-bold text-green-700 mr-2">
+                  NR <span className="text-amber-600">Gold</span>
+                </span>
+                <MobileNav />
+              </div>
             </nav>
           </header>
 
