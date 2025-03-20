@@ -86,30 +86,6 @@ const impactMetrics = [
   }
 ];
 
-const TeamMembers = () => {
-    return (
-        <div className="team-members">
-            <h2>Meet Our Team</h2>
-            <div className="member">
-                <Image src="/images/about/jude.png" alt="Jude" width={500} height={500} />
-                <p>Jude</p>
-            </div>
-            <div className="member">
-                <Image src="/images/about/korir.png" alt="Korir" width={500} height={500} />
-                <p>Korir</p>
-            </div>
-            <div className="member">
-                <Image src="/images/about/kiprop.png" alt="Kiprop" width={500} height={500} />
-                <p>Kiprop</p>
-            </div>
-            <div className="member">
-                <Image src="/images/about/kimaru.png" alt="Kimaru" width={500} height={500} />
-                <p>Kimaru</p>
-            </div>
-        </div>
-    );
-};
-
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -273,8 +249,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      <TeamMembers />
     </div>
   );
 } 
