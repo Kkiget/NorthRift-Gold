@@ -45,7 +45,7 @@ const team = [
   {
     name: 'Philemon Kiprop',
     role: 'Founder',
-    image: '/images/team/african-businessman-1.jpg',
+    image: '/images/about/kiprop.png',
     bio: 'With over 15 years of experience in organic farming, Philemon leads our mission to revolutionize sustainable agriculture in Kenya.'
   },
   {
@@ -91,19 +91,19 @@ const TeamMembers = () => {
         <div className="team-members">
             <h2>Meet Our Team</h2>
             <div className="member">
-                <img src="/images/about/jude.png" alt="Jude" />
+                <Image src="/images/about/jude.png" alt="Jude" width={500} height={500} />
                 <p>Jude</p>
             </div>
             <div className="member">
-                <img src="/images/about/korir.png" alt="Korir" />
+                <Image src="/images/about/korir.png" alt="Korir" width={500} height={500} />
                 <p>Korir</p>
             </div>
             <div className="member">
-                <img src="/images/about/kiprop.png" alt="Kiprop" />
+                <Image src="/images/about/kiprop.png" alt="Kiprop" width={500} height={500} />
                 <p>Kiprop</p>
             </div>
             <div className="member">
-                <img src="/images/about/kimaru.png" alt="Kimaru" />
+                <Image src="/images/about/kimaru.png" alt="Kimaru" width={500} height={500} />
                 <p>Kimaru</p>
             </div>
         </div>
@@ -273,6 +273,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <TeamMembers />
     </div>
   );
 } 
